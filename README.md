@@ -1,7 +1,7 @@
 # CarND
 Repo for Self Driving Car Nanodegree projects
 
-<div align="center">
+<div align="left">
    <br>
-  <img src="./images/extracted-lines.jpg" width="480"><br><br>
+  <img src="./images/extracted-lines.jpg" width="600"><br><br>
 </div>
