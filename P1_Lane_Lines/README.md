@@ -2,6 +2,7 @@
 # Finding Lane Lines
 
 This project features code for finding lane lines in a video stream. Check out the [writeup_report](https://github.com/KvalheimRacing/CarND/blob/master/P1_Lane_Lines/writeup_report.md) file for a detailed report on this project.
+The project requrements can be found [here](https://review.udacity.com/#!/rubrics/322/view)
 
 ## The following files are included:
 
