@@ -14,7 +14,8 @@ The two main factions currently are the robotics approach and the end-to-end neu
 
 The goals of this project are:
 
-1. Get started 
+1. Get started
+   * Init needed files
 2. Draw conclutions for future work
 
 # Hyperparameters
