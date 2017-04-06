@@ -1,2 +1,2 @@
 # CarND
-Udacity Self Driving Car Nanodegree
+Repo for Self Driving Car Nanodegree projects
