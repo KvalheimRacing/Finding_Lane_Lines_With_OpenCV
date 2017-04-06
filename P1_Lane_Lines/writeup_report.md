@@ -23,5 +23,7 @@ The goals of this project are:
 * Batch size: 128 (tried 64, 128, 256, 1024)
 * Adam optimizer
 
+> This bring me to the other rule of thumb, **every problem will have tradeoffs**. The question becomes what are the tradeoffs you are willing to make? This will depend on the business case you are solving!
+
 # References
 1. [Comma.ai steering model](https://github.com/commaai/research/blob/master/train_steering_model.py)
