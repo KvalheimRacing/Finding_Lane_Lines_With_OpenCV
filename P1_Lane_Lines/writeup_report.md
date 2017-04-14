@@ -18,6 +18,12 @@ The goals of this project are:
    * Init needed files
 2. Draw conclutions for future work
 
+
+![Demo](https://github.com/KvalheimRacing/CarND/blob/master/P1_Lane_Lines/test_videos_output/solidWhiteRight.gif)
+
+![Demo2](https://github.com/KvalheimRacing/CarND/blob/master/P1_Lane_Lines/test_videos_output/solidYellowLeft.gif)
+
+
 # Hyperparameters
 
 * Learning rate: 1e-1 (very aggressive!)
