@@ -131,7 +131,7 @@ As a cosequence of all these shortcomings, we can see that the algorithm goes ba
    <br>
   <img src="https://github.com/KvalheimRacing/CarND/blob/master/images/uk.jpg"><br><br>
 </div>
-
+> *This is acually [a streat in UK](https://aseasyasridingabike.wordpress.com/2014/11/24/how-britain-solves-a-school-run-problem/) btw!*
 
 
 # Conclutions for future work
