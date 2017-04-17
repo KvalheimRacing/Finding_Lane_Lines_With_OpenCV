@@ -62,8 +62,22 @@ Test Image             |  Blurred
 ### Video White
 [![Video White](https://github.com/KvalheimRacing/CarND/blob/master/P1_Lane_Lines/test_videos_output/solidWhiteRight.gif)](https://youtu.be/bajgiQuEc38)
 
+[gray](https://github.com/KvalheimRacing/CarND/blob/master/P1_Lane_Lines/test_images_output/Processed_gray_img_solidYellowLeft.jpg)
 
-(see [Jupyter Notebook](https://github.com/CYHSM/carnd/blob/master/CarND-LaneLines-P1/P1.ipynb) for more details)
+[blur](https://github.com/KvalheimRacing/CarND/blob/master/P1_Lane_Lines/test_images_output/Processed_blur_img_solidYellowLeft.jpg)
+
+[canny](https://github.com/KvalheimRacing/CarND/blob/master/P1_Lane_Lines/test_images_output/Processed_edge_img_solidYellowLeft.jpg)
+
+[masked](https://github.com/KvalheimRacing/CarND/blob/master/P1_Lane_Lines/test_images_output/Processed_maskd_img_solidYellowLeft.jpg)
+
+[hough](https://github.com/KvalheimRacing/CarND/blob/master/P1_Lane_Lines/test_images_output/Processed_hough_img_solidYellowLeft.jpg)
+
+[lane](https://github.com/KvalheimRacing/CarND/blob/master/P1_Lane_Lines/test_images_output/Processed_lane_img_solidYellowLeft.jpg)
+
+[finiced](https://github.com/KvalheimRacing/CarND/blob/master/P1_Lane_Lines/test_images_output/Processed_solidYellowLeft.jpg)
+
+
+(see [Jupyter Notebook]https://github.com/KvalheimRacing/CarND/blob/master/P1_Lane_Lines/P1_Lane_Lines.ipynb) for more details)
 
 # Hyperparameters
 
@@ -152,12 +166,15 @@ Use object recognition to reject lines belonging to recognised objects
 
 a deep learning model?
 
+there are a few things I’d like to improve on.
+
 Implement GUI for parameter tuning in this [article](https://medium.com/@maunesh/finding-the-right-parameters-for-your-computer-vision-algorithm-d55643b6f954)
 
 If you enjoyed this post, please hit recommend! Follow me on Medium to know about my future projects.
 This is great — I’ll have a chance to work on this challenge in Project 4.
 Stay tuned for more self-driving car awesomeness in the future!
 
+Went mental on one of the last challenge videos of udacitys p4
 
 Acknowledgement
 Thanks to Udacity staff for giving me the oppurtunity to begin a new journey in my life with top-talented professionals and students all over the world learning and researching for SDC technologies.
