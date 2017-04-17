@@ -29,7 +29,7 @@ With that said, below is a brief explenation of the pipeline which you can find 
    * Separating the lines into left and righ lines respectively
    * Here I also make a history of lines, separate and averiges all the different lines I get from the hough function
 7) Merge the lane filling with the original image
-   * Using an addWheighted() function, see [`α β λ`](writeup_report.md#Parameters) below
+   * Using an addWheighted() function, see [`α β λ`](writeup_report.md# Parameters) below
 
 Test Image             |  1.Gray
 :-------------------------:|:-------------------------:
@@ -87,7 +87,7 @@ The final test of the algorithm was on the videos below. I spent some time tunin
 
 # Reflections
 
-Considering this algorithm only takes account for straight lines, I guess it's ok.
+Considering this algorithm only takes account for straight lines, it's ok.
 
 
 > This bring me to the other rule of thumb, **every problem will have tradeoffs**. The question becomes what are the tradeoffs you are willing to make? This will depend on the case you are solving!
@@ -161,7 +161,7 @@ I will work on a more advanced lane finding algorithm later on in May, so I will
 Thanks to Udacity for giving me the oppurtunity to begin a new journey in my life with top-talented professionals and students all over the world learning and researching SDC technologies.
 
 # References & Resources
-1. [Comma.ai steering model](https://github.com/commaai/research/blob/master/train_steering_model.py)
+1. [Udacity course material](https://github.com/KvalheimRacing/CarND/tree/master/demos)
 2. [Canny edge detection](https://en.wikipedia.org/wiki/Canny_edge_detector)
 3. [Hough transform](https://en.wikipedia.org/wiki/Hough_transform)
 4. [HSV](https://en.wikipedia.org/wiki/HSL_and_HSV)
