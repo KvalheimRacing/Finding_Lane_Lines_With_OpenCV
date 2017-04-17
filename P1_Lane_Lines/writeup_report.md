@@ -22,22 +22,22 @@ When we drive, we use our eyes to decide where to go. The lines on the road that
    * This helps getting rid of noisy parts of the image which makes the next steps more reliable
 4) Run a Canny edge function
    * This step detects edges in the image with the help of the gradient and hysteris
-5) Apply a ROI (region of interest) and mask away the undesired regions.
-   * See the variable "vertices" in the [Jupyter Notebook](https://github.com/KvalheimRacing/CarND/blob/master/P1_Lane_Lines/P1_Lane_Lines.ipynb) for more details.
+5) Apply a ROI (region of interest) and mask away the undesired regions
+   * See the variable [vertices](https://github.com/KvalheimRacing/CarND/blob/master/P1_Lane_Lines/P1_Lane_Lines.ipynb) for more details
 6) Retrieve probabilistic Hough lines and make a lane filling fromline segments
    * Separating the lines into left and righ lines respectively
    * Here I also make a history of lines, separate and averiges all the different lines I get from the hough function
 7) Merge the lane filling with the original image
-   * Using an addWheighted() function, see [`α β λ` below](WRITEUP.md#Parameters)
+   * Using an addWheighted() function, see [`α β λ`](writeup_report.md#Parameters) below
 
-Test Image             |  Gray
+Test Image             |  1.Gray
 :-------------------------:|:-------------------------:
 ![input](https://github.com/KvalheimRacing/CarND/blob/master/P1_Lane_Lines/test_images/solidYellowLeft.jpg)|![gray](https://github.com/KvalheimRacing/CarND/blob/master/P1_Lane_Lines/test_images_output/Processed_gray_img_solidYellowLeft.jpg)
-Blur                   |  Edges
+3.Gaussian Blur                   |  4.Edges from Canny
 ![blur](https://github.com/KvalheimRacing/CarND/blob/master/P1_Lane_Lines/test_images_output/Processed_blur_img_solidYellowLeft.jpg)|![canny](https://github.com/KvalheimRacing/CarND/blob/master/P1_Lane_Lines/test_images_output/Processed_edge_img_solidYellowLeft.jpg)
-Masked                  |  Hough Lines
+5.Masked only ROI                  |  6.Hough Lines
 ![masked](https://github.com/KvalheimRacing/CarND/blob/master/P1_Lane_Lines/test_images_output/Processed_maskd_img_solidYellowLeft.jpg)|![hough](https://github.com/KvalheimRacing/CarND/blob/master/P1_Lane_Lines/test_images_output/Processed_hough_img_solidYellowLeft.jpg)
-Lane                    | Result
+6.Lane made by Hough Lines                    | 7.Result
 ![lane](https://github.com/KvalheimRacing/CarND/blob/master/P1_Lane_Lines/test_images_output/Processed_lane_img_solidYellowLeft.jpg)|![finiced](https://github.com/KvalheimRacing/CarND/blob/master/P1_Lane_Lines/test_images_output/Processed_solidYellowLeft.jpg)
 
 ### Solid White
