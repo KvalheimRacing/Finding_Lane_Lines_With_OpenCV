@@ -43,7 +43,7 @@ Input Image             |  1.Gray
 
 
 > You can find the rest of the pictures [here](https://github.com/KvalheimRacing/CarND/tree/master/P1_Lane_Lines/test_images_output)
-The final test of the algorithm was on the videos below. I spent some time tuning the parameters, especially how many lanes which gets stored in `hist_frames`. Found out that the ideal value was around 10-20. I also tried a lot of values on the Canny function and the Hough transform, from other solutions, but with no luck of forther improwing the result shown here.
+The final test of the algorithm was on the videos below. I spent some time tuning the parameters, especially how many lanes which gets stored in `hist_frames`. Found out that the ideal value was around 10-20. I also tried a lot of values on the Canny function and the Hough transform from other solutions, but with no luck of further improwing the result shown here.
 
 ### Solid Yellow
 [![solidYellowLeft](https://github.com/KvalheimRacing/CarND/blob/master/P1_Lane_Lines/test_videos_output/solidYellowLeft.gif)](https://www.youtube.com/watch?v=ZocZa1NPjHo&feature=youtu.be)
@@ -54,7 +54,7 @@ The final test of the algorithm was on the videos below. I spent some time tunin
 ### Challenge
 [![challenge 2](https://github.com/KvalheimRacing/CarND/blob/master/P1_Lane_Lines/test_videos_output/challenge16.gif)](https://www.youtube.com/watch?v=rM0yoBgP2O0&feature=youtu.be)
 
-> I managed to get some ok results in the videos aswell as on the pictures. There was one more challenge [video](https://github.com/KvalheimRacing/CarND/blob/master/P1_Lane_Lines/test_videos_output/challenge18.gif) were the algoritm had no chance, I  will talk about this in the reflections below.
+> After some time, I managed to get the middle challenge moveie over done with a ok result. It struggles in the middle there because of sudden change in light contitions, and  There was one more challenge [video](https://github.com/KvalheimRacing/CarND/blob/master/P1_Lane_Lines/test_videos_output/challenge18.gif) were the algoritm had no chance, I  will talk about this in the reflections below.
 
 
 
