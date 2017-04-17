@@ -133,26 +133,26 @@ As a consequence of all these shortcomings, we can see that the algorithm goes b
 </div>
 
 
-# Conclutions for future work
+# Conclusions for future work
 
 There will always be hard situations, but these are a few things I’d like to improve in the first place:
 
 ## Cool stuff:
 
 * Implement GUI for parameter tuning, got inspired by [this](https://medium.com/@maunesh/finding-the-right-parameters-for-your-computer-vision-algorithm-d55643b6f954) article
-* or Implement Deep Learning for either parameter tuning, or choosing optimal hough lines.
-* Construct a 3d image/depth image by modeling scene constraints. This will help in making a 3D environment around the car, and could be used for vheicle/object detection.
+* or Implement Deep Learning for either parameter tuning, or choosing optimal Hough lines.
+* Construct a 3D image/depth image by modeling scene constraints. This will help in making a 3D environment around the car, and could be used for vehicle/object detection.
  
 ## Important stuff:
 
 
-* Hard-Coding ROI is a major fault, the lane detection ROI, must be flexible. I could use object recognition to detect cars, pedestrians, bocyclist etc, and to detect the road as ROI. Then I could reject lines belonging to other recognised objects (cars, people etc).
-* Defining a prosedure to choose between multiple lanes (identify all the lanes (in a lane class?), and from turn signal choose lane).
+* Hard-Coding ROI is a major fault, the lane detection ROI, must be flexible. I could use object recognition to detect cars, pedestrians, bicyclist etc, and to detect the road as ROI. Then I could reject lines belonging to other recognized objects (cars, people etc).
+* Defining a procedure to choose between multiple lanes (identify all the lanes (in a lane class?), and from turn signal choose lane).
 * Rather than fitting a line, fitting a curve with a higher degree polynomial will provide a more accurate set of lane lines for curved and sharp turns.
 
 
 
-Another Udacity student, [Kirill Danilyuk](https://github.com/Kidra521/carnd/blob/master/p1_lane_lines_detection/P1.ipynb) has a very good solution implementing classes for lane lines, I think this is a good inspiration for everyone that is considering this approach. So I will definetly be checking out that code with regards to ROI.
+Another Udacity student, [Kirill Danilyuk](https://github.com/Kidra521/carnd/blob/master/p1_lane_lines_detection/P1.ipynb) has a very good solution implementing classes for lane lines, I think this is a good inspiration for everyone that is considering this approach. So I will definitely be checking out that code with regards to ROI.
 
 ***
 
@@ -164,11 +164,11 @@ I will work on a more advanced lane finding algorithm later on in May, so I will
 
 > [Lane detection and tracking using B-snake](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.106.6644&rep=rep1&type=pdf)
 
-Kepping in mind that the two challenge videos here are from the advanced lane finding project, I feel like having a good starting point when the time comes for that project.
+Keeping in mind that the two challenge videos here are from the advanced lane finding project, I feel like having a good starting point when the time comes for that project.
 A good starting point, and a lot of awesome stuff to try, this will be so cool!
 
 ### Acknowledgement
-Thanks to Udacity for giving me the oppurtunity to begin a new journey in my life with top-talented professionals and students all over the world learning and researching on SDC technologies.
+Thanks to Udacity for giving me the opportunity to begin a new journey in my life with top-talented professionals and students all over the world learning and researching on SDC technologies.
 
 # References & Resources
 1. [Udacity course material](https://github.com/KvalheimRacing/CarND/tree/master/demos)
