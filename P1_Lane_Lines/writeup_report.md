@@ -54,7 +54,7 @@ The final test of the algorithm was on the videos below. I spent some time tunin
 ### Challenge
 [![challenge 2](https://github.com/KvalheimRacing/CarND/blob/master/P1_Lane_Lines/test_videos_output/challenge16.gif)](https://www.youtube.com/watch?v=rM0yoBgP2O0&feature=youtu.be)
 
-> After some time, I managed to get the middle challenge movie over done with a ok result. It struggles in the middle there because of sudden change in light conditions, so I turned up `hist_frames` to about 30, and it didn't bother that it didn't find lanes in that short period of time (because of the memory). There was one more challenge [video](https://github.com/KvalheimRacing/CarND/blob/master/P1_Lane_Lines/test_videos_output/challenge18.gif) (not for this project, but for the advanced lane lines project in the end of may), where the algorithm had no chance, I will talk about this in the reflections below.
+> After some time, I managed to get the middle challenge movie over done with a ok result. It struggles in the middle there because of sudden change in light conditions, so I turned up `hist_frames` to about 30, and it didn't bother that it didn't find lanes in that short period of time (because of the memory). There was one more challenge [video](https://github.com/KvalheimRacing/CarND/blob/master/P1_Lane_Lines/test_videos_output/challenge18.gif) (not for this project, but for the advanced lane lines project in the end of May), where the algorithm had no chance, I will talk about this in the reflections below.
 
 
 
