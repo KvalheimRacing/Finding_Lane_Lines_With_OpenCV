@@ -18,7 +18,7 @@ With that said, below is a brief explanation of the pipeline which you can find 
 1) Convert image to gray-scale
    * Like all the functions under, this comes straight out of openCV
 2) Convert from RGB to HSV color space
-   * HSV separates luma, (image intensity), from chroma (the color information). This means that it's easier for us to detect the dark yellow lines.
+   * HSV separates luma, (image intensity), from chroma (the color information). This means that it's easier for us to detect dark yellow lines.
 3) Apply a low pass filter, Gaussian kernel
    * This helps getting rid of noisy parts of the image which makes the next steps more reliable
 4) Run a Canny edge function
