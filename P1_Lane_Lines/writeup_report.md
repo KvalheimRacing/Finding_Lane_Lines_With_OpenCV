@@ -15,19 +15,19 @@ With that said, below is a brief explanation of the pipeline which you can find 
 
 
 ### Pipeline
-1) Convert image to grayscale
-   * Like all the functons under, this comes straight out of openCV
+1) Convert image to gray-scale
+   * Like all the functions under, this comes straight out of openCV
 2) Convert from RGB to HSV color space
    * HSV separates luma, (image intensity), from chroma (the color information). This means that it's easier for us to detect the dark yellow lines.
 3) Apply a low pass filter, Gaussian kernel
    * This helps getting rid of noisy parts of the image which makes the next steps more reliable
 4) Run a Canny edge function
-   * This step detects edges in the image with the help of the gradient and hysteris
+   * This step detects edges in the image with the help of the gradient and hysteresis
 5) Apply a ROI (region of interest) and mask only what we want
    * See the variable [vertices](https://github.com/KvalheimRacing/CarND/blob/master/P1_Lane_Lines/P1_Lane_Lines.ipynb) for more details
 6) Retrieve probabilistic Hough lines and make a lane filling from line segments
-   * Separating the lines into left and righ lines respectively
-   * Here I also make a history of lines, separate and averiges all the different lines I get from the hough function
+   * Separating the lines into left and right lines respectively
+   * Here I also make a history of lines, separate and averages all the different lines I get from the Hough function
 7) Merge the lane filling with the original image
    * Using an addWheighted() function, see [`α β λ`](writeup_report.md#parameters) below
 
@@ -43,7 +43,7 @@ Input Image             |  1.Gray
 
 
 > You can find the rest of the pictures [here](https://github.com/KvalheimRacing/CarND/tree/master/P1_Lane_Lines/test_images_output)
-The final test of the algorithm was on the videos below. I spent some time tuning the parameters, especially how many lanes which gets stored in `hist_frames`. Found out that the ideal value was around 10-20. I also tried a lot of parameters on the Canny function and the Hough transform from other solutions, but with no luck of further improwing the result shown here.
+The final test of the algorithm was on the videos below. I spent some time tuning the parameters, especially how many lanes which gets stored in `hist_frames`. Found out that the ideal value was around 10-20. I also tried a lot of parameters on the Canny function and the Hough transform from other solutions, but with no luck of further improving the result shown here.
 
 ### Solid Yellow
 [![solidYellowLeft](https://github.com/KvalheimRacing/CarND/blob/master/P1_Lane_Lines/test_videos_output/solidYellowLeft.gif)](https://www.youtube.com/watch?v=ZocZa1NPjHo&feature=youtu.be)
@@ -63,7 +63,7 @@ The final test of the algorithm was on the videos below. I spent some time tunin
 * `α = 0.9`                  Weight factor for initial image
 * `β = 0.4`                  Weight factor for new image
 * `λ = 0.22`                 Scalar added to each sum (of new and initial image), see weighted_img function
-* `kernel_size = 7`          Size of the n x n (2D) matrix used as kernel in gaussian blur. Must be an odd positive integer.
+* `kernel_size = 7`          Size of the n x n (2D) matrix used as kernel in Gaussian blur. Must be an odd positive integer.
 * `low_threshold = 50`       Value for the canny function, defining the first threshold - lower hysteresis bound.
 * `high_threshold = 150`     Value for the canny function, defining the second threshold - upper hysteresis bound.
 * `hist_frames = 10`         History of how many frames back to remember lane lines
@@ -77,11 +77,11 @@ The final test of the algorithm was on the videos below. I spent some time tunin
 * `right_line_stack = []`    For keeping a stack of right lines
 * `left_line_history = []`   For keeping a history of left lines, if there is no left lines
 * `right_line_history = []`  For keeping a history of right lines, if there is no right lines
-* `H = img.shape[0]`         Getting the hight of the image
-* `Hr = H*0.6`               Reducing the hight
+* `H = img.shape[0]`         Getting the height of the image
+* `Hr = H*0.6`               Reducing the height
 * `W = img.shape[1]`         Getting the width of the image
 * `ly = np.array([20, 100, 100], dtype = "uint8")`  Low lalue for yellow HSV.
-* `uy = np.array([30, 255, 255], dtype = "uint8")`  Hig value for yellow HSV.
+* `uy = np.array([30, 255, 255], dtype = "uint8")`  High value for yellow HSV.
 
 
 
