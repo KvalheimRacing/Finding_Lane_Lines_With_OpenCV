@@ -12,7 +12,7 @@ Like the four seasons, the AI winter has come and gone. It's Spring and this is 
 </div>
 
 > This project features code for finding the driver lane in pictures or video stream. Check out the **[writeup_report](https://github.com/KvalheimRacing/CarND/blob/master/P1_Lane_Lines/writeup_report.md)** file for a detailed report on this project.
-The project requirements made by Udacity can be found [here](https://review.udacity.com/#!/rubrics/322/view)
+The project requirements made by Udacity can be found **[here](https://review.udacity.com/#!/rubrics/322/view)**
 
 ##
 ## The goals of this project were:
@@ -30,4 +30,4 @@ The project requirements made by Udacity can be found [here](https://review.udac
 * [Test_videos](https://github.com/KvalheimRacing/CarND/tree/master/P1_Lane_Lines/test_videos_output) for testing the algorithm.
 * [Output videos](https://github.com/KvalheimRacing/CarND/tree/master/P1_Lane_Lines/test_videos_output) from the algorithm.
 * [Examples](https://github.com/KvalheimRacing/CarND/tree/master/P1_Lane_Lines/examples) from Udacity, setting the standard.
-* **A [report](https://github.com/KvalheimRacing/CarND/blob/master/P1_Lane_Lines/writeup_report.md) summarizing the results and the project.**
+* A **[report](https://github.com/KvalheimRacing/CarND/blob/master/P1_Lane_Lines/writeup_report.md)** summarizing the results and the project.
