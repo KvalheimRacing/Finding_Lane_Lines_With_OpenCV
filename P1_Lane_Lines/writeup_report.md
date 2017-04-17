@@ -125,7 +125,7 @@ As a cosequence of all these shortcomings, we can see that the algorithm goes ba
 * Got the Canny and Hough function working well on the required videos  
 
 
-> This brings me to a classic rule of thumb, **every problem will have tradeoffs**. The question becomes what are the tradeoffs you are willing to make? This will depend on the case you are solving, and here we have a super simple algorithm, we can't expect it to handle all of these hard situations described over only on a couple of lines of code.
+> This brings me to a classic rule of thumb, **every problem will have tradeoffs**. The question becomes what are the tradeoffs you are willing to make? This will depend on the case you are solving, and here we have a super simple algorithm, we can't expect it to handle all of these hard situations described over, only on a couple of lines of code.
 
 
 
