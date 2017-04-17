@@ -142,7 +142,7 @@ There are a few things I’d like to improve.
 ## Important stuff:
 
 
-* Hard-Coding ROI is a major fault, the lane detection ROI, must be flexible. I could use object recognition to reject lines belonging to recognised objects/classes. F.eks if I could classify the road, ROI would always be a subclass of road, or just the entire road.
+* Hard-Coding ROI is a major fault, the lane detection ROI, must be flexible. I could use object recognition to detect cars, pedestrians, bocyclist etc, and to detect the road as ROI. Then I could reject lines belonging to other recognised objects (cars, people etc).
 * Defining a prosedure to choose between multiple lanes (identify all the lanes (in a lane class?), and from turn signal choose lane).
 * Rather than fitting a line, fitting a curve with a higher degree polynomial will provide a more accurate set of lane lines for curved and sharp turns.
 
