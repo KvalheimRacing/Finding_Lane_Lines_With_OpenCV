@@ -6,12 +6,15 @@ The two main factions currently are the robotics approach and the end-to-end neu
 
 Like the four seasons, the AI winter has come and gone. It's Spring and this is the story of one man's attempt to explore the pros and cons of the end-to-end neural networks faction in a controlled environment. The hope is to draw some conclusions that will help the greater community advance as a whole.
 
+<div align="center">
+   <br>
+  <img src="test_videos_output\solidYellowLeft.gif"><br><br>
+</div>
 
-<
 > This project features code for finding the driver lane in pictures or video stream. Check out the [writeup_report](https://github.com/KvalheimRacing/CarND/blob/master/P1_Lane_Lines/writeup_report.md) file for a detailed report on this project.
 The project requirements made by Udacity can be found [here](https://review.udacity.com/#!/rubrics/322/view)
-<
 
+##
 ## The goals of this project were:
 
 1. Get to know OpenCV (I really took the time to read up on the functions used).
