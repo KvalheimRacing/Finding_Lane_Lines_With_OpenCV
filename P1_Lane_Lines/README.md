@@ -6,10 +6,12 @@ The two main factions currently are the robotics approach and the end-to-end neu
 
 Like the four seasons, the AI winter has come and gone. It's Spring and this is the story of one man's attempt to explore the pros and cons of the end-to-end neural networks faction in a controlled environment. The hope is to draw some conclusions that will help the greater community advance as a whole.
 
+-
 
 > This project features code for finding the driver lane in pictures or video stream. Check out the [writeup_report](https://github.com/KvalheimRacing/CarND/blob/master/P1_Lane_Lines/writeup_report.md) file for a detailed report on this project.
 The project requirements made by Udacity can be found [here](https://review.udacity.com/#!/rubrics/322/view)
 
+-
 ## The goals of this project were:
 
 1. Get to know OpenCV (I really took the time to read up on the functions used).
@@ -17,9 +19,9 @@ The project requirements made by Udacity can be found [here](https://review.udac
 3. Create a good written report and discuss the methodology aswell as results.
 
 
-# The following are included:
+## The following are included:
 
-* [P1_Lane_Lines.ipynb](https://github.com/KvalheimRacing/CarND/blob/master/P1_Lane_Lines/P1_Lane_Lines.ipynb) containing the only code needed for the algorithm.
+* [P1_Lane_Lines.ipynb](https://github.com/KvalheimRacing/CarND/blob/master/P1_Lane_Lines/P1_Lane_Lines.ipynb) containing the only code (Python 3.5) needed for the algorithm.
 * [Test images](https://github.com/KvalheimRacing/CarND/tree/master/P1_Lane_Lines/test_images) for testing the algorithm.
 * [Output images](https://github.com/KvalheimRacing/CarND/tree/master/P1_Lane_Lines/test_images_output) from the algorithm.
 * [Test_videos](https://github.com/KvalheimRacing/CarND/tree/master/P1_Lane_Lines/test_videos_output) for testing the algorithm.
