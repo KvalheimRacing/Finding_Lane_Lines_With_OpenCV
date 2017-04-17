@@ -105,7 +105,7 @@ That brings us on to the;
 * The algorithm is hard coded after some colour values. This means:
    * Would probably have a hard time at nigt, in fog, rain, but most of all snow! (and ofc in sandstorms on the highway in Dubai;)
    * Collapses where there is no lane markings over a long period of time, and no contrasts dividing the two lanes. This is typically urban roads and country roads.
-   * It is porbably overfittef to the data availabe in this project
+   * It is porbably overfitted to the data availabe in this project
    * It is sensitive to shadows+sunlight, over a long stretch that would be a problem.
 * A problem with the method of only front camera mounted like this is when the sun hits right in the lens. The algorithm would collapse totally
 * You would also have problem while changing road lanes (has no logic for this), algorithm would collapse.
@@ -122,7 +122,7 @@ As a cosequence of all these shortcomings, we can see that the algorithm goes ba
 * Using HSV gave me a more accurate value for yellow, boosted the "visability" some, just what I needed to get the little extra, for handeling the challenge video.
 * The memory part was nessesary and good
 * The algorithm is simple and short, easy to work with.
-* Got the Canny and Hough function working well 
+* Got the Canny and Hough function working well on the required videos  
 
 
 > This brings me to a classic rule of thumb, **every problem will have tradeoffs**. The question becomes what are the tradeoffs you are willing to make? This will depend on the case you are solving, and here we have a super simple algorithm, we can't expect it to handle all of these hard situations described over only on a couple of lines of code.
@@ -142,16 +142,15 @@ There are a few things I’d like to improve.
 ## Important stuff:
 
 
-* Hard-Coding ROI is a major fault. Use object recognition to reject lines belonging to recognised objects  , classes/object oriented programming for road, use as ROI, and also O for cars
-* The lane detection region of interest (ROI), must be flexible ( tight turns and bumper to bumper traffic) - use objects and detect the road to use it as ROI
-* Defining a prosedure to choose between multiple lanes (identify all the lanes, and from turn signal choose lane).
-   * Defining a procedure to detect a lane change 
-* Rather than fitting a line, fitting a curve with a higher degree polynomial will provide a more accurate set of lane lines for sharp curves.
+* Hard-Coding ROI is a major fault, the lane detection ROI, must be flexible. I could use object recognition to reject lines belonging to recognised objects/classes. F.eks if I could classify the road, ROI would always be a subclass of road, or just the entire road.
+* Defining a prosedure to choose between multiple lanes (identify all the lanes (in a lane class?), and from turn signal choose lane).
+* Rather than fitting a line, fitting a curve with a higher degree polynomial will provide a more accurate set of lane lines for curved and sharp turns.
 
 
 
 Another udacity student, [Kirill Danilyuk](https://github.com/Kidra521/carnd/blob/master/p1_lane_lines_detection/P1.ipynb) has a very good solution implementing classes for lane lines, I think this is a good inspiration for everyone that is considering this approach. So I will definetly be checking that code out with regards to ROI.
 
+***
 
 I will work on a more advanced lane finding algorithm later on in May, so I will look into some papers regarding taking it to the nest level, specifically these ones;
 
