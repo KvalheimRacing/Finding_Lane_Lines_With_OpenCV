@@ -90,31 +90,31 @@ The final test of the algorithm was on the videos below. I spent some time tunin
 
 # Reflections
 
-It's cool that an algorithm I made detect road lanes, but this approach is full og comprimises and I would not use it before a lot more situations has been accounted for.
+It's cool that an algorithm I made detect road lanes, but this approach is full of compromises and I would not use it before a lot more situations has been accounted for.
 
 That brings us on to the;
 
-## Shortcommings:
+## Shortcomings:
 
 * Memory for remembering lane lines to counter jittering is good, but can make the algorithm slow (tuning of `hist_frames` is important).
-* I could be averiging over more Hough lines by adjusting the thresholds, but that would result in performance loss from the algorithm (more time to compute).
-* The algorithm is only looking for straight lines, would therfore have a problem:
-   * In thight/sharps turns (and turns generally).
+* I could be averaging over more Hough lines by adjusting the thresholds, but that would result in performance loss from the algorithm (more time to compute).
+* The algorithm is only looking for straight lines, would therefore have a problem:
+   * In tight/sharps turns (and turns generally).
    * At crossroads, if you are going to the left or right (has no logic for this)
    * In roundabouts
-* The algorithm is hard coded after some colour values. This means:
+* The algorithm is hard coded after some color values. This means:
    * Would probably have a hard time at nigt, in fog, rain, but most of all snow! (and ofc in sandstorms on the highway in Dubai;)
    * Collapses where there is no lane markings over a long period of time, and no contrasts dividing the two lanes. This is typically urban roads and country roads.
-   * It is porbably overfitted to the data availabe in this project
+   * It is probably over-fitted to the data available in this project
    * It is sensitive to shadows+sunlight, over a long stretch that would be a problem.
 * A problem with the method of only front camera mounted like this is when the sun hits right in the lens. The algorithm would collapse totally
 * You would also have problem while changing road lanes (has no logic for this), algorithm would collapse.
 * The biggest one yet; ROI is hard coded!
    * Could easily mistake a triangular hill in the horizon for a lane
    * Algorithm will fail if the car is not in the middle of the road
-   * Obstructions like cars, which can be in the lane, and have lines which looks simmilar to the ones the algorithm is loking for.
+   * Obstructions like cars, which can be in the lane, and have lines which looks similar to the ones the algorithm is looking for.
 
-As a cosequence of all these shortcomings, we can see that the algorithm goes bananas on one of the last challenge videos of P4, this is not unexpected and kind of funny ^^, 
+As a consequence of all these shortcomings, we can see that the algorithm goes bananas on one of the last challenge videos of P4, this is not unexpected and kind of funny ^^, 
 
 
 ## The good things
