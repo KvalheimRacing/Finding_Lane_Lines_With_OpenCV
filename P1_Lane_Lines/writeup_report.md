@@ -125,14 +125,12 @@ As a cosequence of all these shortcomings, we can see that the algorithm goes ba
 * Got the Canny and Hough function working well on the required videos  
 
 
-> This brings me to a classic rule of thumb, **every problem will have tradeoffs**. The question becomes what are the tradeoffs you are willing to make? This will depend on the case you are solving, and here we have a super simple algorithm, we can't expect it to handle all of these hard situations described over only on a couple of lines of code. Sometimes situations are more complex, like in the picture below:
+> This brings me to a classic rule of thumb, **every problem will have tradeoffs**. The question becomes what are the tradeoffs you are willing to make? This will depend on the case you are solving, and here we have a super simple algorithm, we can't expect it to handle all of these hard situations described over only on a couple of lines of code. Sometimes [situations](https://aseasyasridingabike.wordpress.com/2014/11/24/how-britain-solves-a-school-run-problem/) are more complex, like in the picture below:
 
 <div align="center">
    <br>
   <img src="https://github.com/KvalheimRacing/CarND/blob/master/images/uk.jpg"><br><br>
 </div>
-
-> This is acually [a streat in UK](https://aseasyasridingabike.wordpress.com/2014/11/24/how-britain-solves-a-school-run-problem/) btw!
 
 
 # Conclutions for future work
