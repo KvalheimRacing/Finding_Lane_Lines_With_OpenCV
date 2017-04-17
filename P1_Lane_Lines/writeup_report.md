@@ -39,7 +39,9 @@ Separate the line segments into Left and Right buckets, and fit a single line to
 Test Image             |  Gray
 :-------------------------:|:-------------------------:
 ![](https://github.com/KvalheimRacing/CarND/blob/master/P1_Lane_Lines/test_images/solidYellowLeft.jpg)  |  ![](https://github.com/KvalheimRacing/CarND/blob/master/P1_Lane_Lines/test_images_output/Processed_gray_img_solidYellowLeft.jpg)
-
+Blur             |  Edges
+:-------------------------:|:-------------------------:
+![](https://github.com/KvalheimRacing/CarND/blob/master/P1_Lane_Lines/test_images/solidYellowLeft.jpg)  |  ![](https://github.com/KvalheimRacing/CarND/blob/master/P1_Lane_Lines/test_images_output/Processed_gray_img_solidYellowLeft.jpg)
 
 
 [below](WRITEUP.md#drawing-lines)
