@@ -1,17 +1,28 @@
-
-When we drive, we use our eyes to decide where to go. The lines on the road that show us where the lanes are act as our constant reference for where to steer the vehicle. Naturally, one of the first things we would like to do in developing a self-driving car is to automatically detect lane lines using an algorithm.
-
 # Finding Lane Lines
 
-This project features code for finding lane lines in a video stream. Check out the [writeup_report](https://github.com/KvalheimRacing/CarND/blob/master/P1_Lane_Lines/writeup_report.md) file for a detailed report on this project.
+
+What a time to be alive! The year is 2017, Tesla is soon to realease model 3, revolutionize transoprt, and autonomous vehicles are the big focus of every major car manufacturer. The race for a winning solution to dominate the mass production of autonomous vehicles are on. 
+The two main factions currently are the robotics approach and the end-to-end neural networks approach. 
+
+Like the four seasons, the AI winter has come and gone. It's Spring and this is the story of one man's attempt to explore the pros and cons of the end-to-end neural networks faction in a controlled environment. The hope is to draw some conclusions that will help the greater community advance as a whole.
+
+
+> This project features code for finding the driver lane in pictures or video stream. Check out the [writeup_report](https://github.com/KvalheimRacing/CarND/blob/master/P1_Lane_Lines/writeup_report.md) file for a detailed report on this project.
 The project requirements made by Udacity can be found [here](https://review.udacity.com/#!/rubrics/322/view)
 
-[Project description on Udacity](https://github.com/udacity/CarND-LaneLines-P1)
+## The goals of this project were:
 
-## The following files are included:
+1. Get to know OpenCV (I really took the time to read up on the functions used).
+2. Use Hough transform to successfully identify the road lane.
+3. Create a good written report and discuss the methodology aswell as results.
 
-1. P1.py containing the script to...
-2. something
-3. something
-4. writeup_report.md summarizing the results
-5. other helper files needed by..
+
+# The following are included:
+
+* [P1_Lane_Lines.ipynb](https://github.com/KvalheimRacing/CarND/blob/master/P1_Lane_Lines/P1_Lane_Lines.ipynb) containing the only code needed for the algorithm.
+* [Test images](https://github.com/KvalheimRacing/CarND/tree/master/P1_Lane_Lines/test_images) for testing the algorithm.
+* [Output images](https://github.com/KvalheimRacing/CarND/tree/master/P1_Lane_Lines/test_images_output) from the algorithm.
+* [Test_videos](https://github.com/KvalheimRacing/CarND/tree/master/P1_Lane_Lines/test_videos_output) for testing the algorithm.
+* [Output videos](https://github.com/KvalheimRacing/CarND/tree/master/P1_Lane_Lines/test_videos_output) from the algorithm.
+* [Examples](https://github.com/KvalheimRacing/CarND/tree/master/P1_Lane_Lines/examples) from Udacity, setting the standard.
+* A [report](https://github.com/KvalheimRacing/CarND/blob/master/P1_Lane_Lines/writeup_report.md) summarizing the results and the project.
