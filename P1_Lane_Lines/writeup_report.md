@@ -90,71 +90,68 @@ The final test of the algorithm was on the videos below. I spent some time tunin
 
 # Reflections
 
-Considering this algorithm only takes account for straight lines, it's ok.
+It's cool that an algorithm I made detect road lanes, but this approach is full og comprimises and I would not use it before a lot more situations has been accounted for.
+
+That brings us on to the;
+
+## Shortcommings:
+
+* Memory for remembering lane lines to counter jittering is good, but can make the algorithm slow (tuning of `hist_frames` is important).
+* I could be averiging over more Hough lines by adjusting the thresholds, but that would result in performance loss from the algorithm (more time to compute).
+* The algorithm is only looking for straight lines, would therfore have a problem:
+   * In thight/sharps turns (and turns generally).
+   * At crossroads, if you are going to the left or right (has no logic for this)
+   * In roundabouts
+* The algorithm is hard coded after some colour values. This means:
+   * Would probably have a hard time at nigt, in fog, rain, but most of all snow! (and ofc in sandstorms on the highway in Dubai;)
+   * Collapses where there is no lane markings over a long period of time, and no contrasts dividing the two lanes. This is typically urban roads and country roads.
+   * It is porbably overfittef to the data availabe in this project
+   * It is sensitive to shadows+sunlight, over a long stretch that would be a problem.
+* A problem with the method of only front camera mounted like this is when the sun hits right in the lens. The algorithm would collapse totally
+* You would also have problem while changing road lanes (has no logic for this), algorithm would collapse.
+* The biggest one yet; ROI is hard coded!
+   * Could easily mistake a triangular hill in the horizon for a lane
+   * Algorithm will fail if the car is not in the middle of the road
+   * Obstructions like cars, which can be in the lane, and have lines which looks simmilar to the ones the algorithm is loking for.
+
+As a cosequence of all these shortcomings, we can see that the algorithm goes bananas on one of the last challenge videos of P4, this is not unexpected. 
 
 
-> This bring me to the other rule of thumb, **every problem will have tradeoffs**. The question becomes what are the tradeoffs you are willing to make? This will depend on the case you are solving!
+## The good things
 
-to counter for jumping, I made a history of lines and took the average of all the lef, and all the right lines. 
-create a buffer of slope and y-intercept values for the last N frames and to overlay a line whose parameters are a rolling mean of these values. This should smooth out the jitter and give the pipeline a "memory" so that if no line segments are detected, it could continue to overlay the last calculated line until another is found.
-
-no classes/object oriented programming
-
-The algorithm I created is likely overfitted to the data available in this project
-
-could averiging over more hough lines by editing thresholds, but that would result in performance loss from tre algorithm.
-
-While it's cool that the code is able to detect lines, this approach is full of compromises and I would not ever use it in real life! :-)
-
-* With increasing the memory, the algorithm became slow and not really usable.
-
-hard coded after colors
-
-The lane detection region of interest (ROI), must be flexible ( tight turns and bumper to bumper traffic) - use objects and detect the road to use it as ROI
-
-test on heavy traffic on the highway
-Driving at night.
-Or, it may fail in bad weather, such as rain or snow fog. 
-roads without lanes (country roads or urban roads.)
-shadows
-
-Using HSV gave me a more accurate value for yellow,, and boosted it some.
-
-not in the middle of the road
+* Using HSV gave me a more accurate value for yellow, boosted the "visability" some, just what I needed to get the little extra, for handeling the challenge video.
+* The memory part was nessesary and good
+* The algorithm is simple and short, easy to work with.
+* Got the Canny and Hough function working well 
 
 
-Obstructions: car within the ROI may be interpreted as a lane 
-
-Sharp curves and hills 
-If the car were to change lanes,  the results would be chaotic during the lane change
-Defining a procedure to detect a lane change 
-
-Hard-Coding ROI is a major fault.
-
-Another issue to consider is performance. I got the best lane estimates by lowering the Hough threshold and averaging over more potential line candidates. However, this comes at a performance cost. As it stands, this pipeline is about 1:1 with real time and takes approximately 1/30s to process per frame. This performance estimate comes from the magic %time functionality in Jupyter notebooks.
-
-Rather than fitting a line, fitting a curve with a higher degree polynomial might provide a more accurate set of lane lines for sharp curves.
-
-Attemt to reconstruct 3d image (at lease depth of lanes) by modeling scene constraints (lanes are equally spaced, plane is roughly horizontal, etc.)
-
-Use object recognition to reject lines belonging to recognised objects 
-
+> This brings me to a classic rule of thumb, **every problem will have tradeoffs**. The question becomes what are the tradeoffs you are willing to make? This will depend on the case you are solving, and here we have a super simple algorithm, we can't expect it to handle all of these hard situations described over only on a couple of lines of code.
 
 
 
 # Conclutions for future work
 
-there are a few things I’d like to improve on.
+There are a few things I’d like to improve.
+
+## Cool stuff:
 
 * Implement GUI for parameter tuning, got inspired by [this](https://medium.com/@maunesh/finding-the-right-parameters-for-your-computer-vision-algorithm-d55643b6f954) article
 * or Implement Deep Learning for either parameter tuning, or choosing optimal hough lines.
-*
+* Construct a 3d image/depth image by modeling scene constraints. This will help in making a 3D environment around the car, and could be used for vheicle/object detection.
+ 
+## Important stuff:
 
-If you enjoyed this post, please hit recommend! Follow me on Medium to know about my future projects\ 
-This is great — I’ll have a chance to work on all of this in the advanced lane finding project.
-Stay tuned for more self-driving car awesomeness in the future!
 
-Went mental on one of the last challenge videos of udacitys p4
+* Hard-Coding ROI is a major fault. Use object recognition to reject lines belonging to recognised objects  , classes/object oriented programming for road, use as ROI, and also O for cars
+* The lane detection region of interest (ROI), must be flexible ( tight turns and bumper to bumper traffic) - use objects and detect the road to use it as ROI
+* Defining a prosedure to choose between multiple lanes (identify all the lanes, and from turn signal choose lane).
+   * Defining a procedure to detect a lane change 
+* Rather than fitting a line, fitting a curve with a higher degree polynomial will provide a more accurate set of lane lines for sharp curves.
+
+
+
+Another udacity student, [Kirill Danilyuk](https://github.com/Kidra521/carnd/blob/master/p1_lane_lines_detection/P1.ipynb) has a very good solution implementing classes for lane lines, I think this is a good inspiration for everyone that is considering this approach. So I will definetly be checking that code out with regards to ROI.
+
 
 I will work on a more advanced lane finding algorithm later on in May, so I will look into some papers regarding taking it to the nest level, specifically these ones;
 
@@ -164,13 +161,17 @@ I will work on a more advanced lane finding algorithm later on in May, so I will
 
 > [Lane detection and tracking using B-snake](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.106.6644&rep=rep1&type=pdf)
 
+Kepping in mind that the two challenge videos here are from the advanced lane finding project, I feel like having a good starting point when the time comes for that project.
+A good starting point, and a lot of awesome stuff to try, this will be so cool!
 
 ### Acknowledgement
-Thanks to Udacity for giving me the oppurtunity to begin a new journey in my life with top-talented professionals and students all over the world learning and researching SDC technologies.
+Thanks to Udacity for giving me the oppurtunity to begin a new journey in my life with top-talented professionals and students all over the world learning and researching on SDC technologies.
 
 # References & Resources
 1. [Udacity course material](https://github.com/KvalheimRacing/CarND/tree/master/demos)
 2. [Canny edge detection](https://en.wikipedia.org/wiki/Canny_edge_detector)
 3. [Hough transform](https://en.wikipedia.org/wiki/Hough_transform)
 4. [HSV](https://en.wikipedia.org/wiki/HSL_and_HSV)
-ll of this 
+5. [Gallen Ballew - for awesome HSV parameters!](https://github.com/galenballew/SDC-Lane-and-Vehicle-Detection-Tracking/blob/master/Part%20I%20-%20Simple%20Lane%20Detection/P1.ipynb)
+
+If you enjoyed this post, please star, like or recommend! :) Follow me on Medium and Git to stay tuned for more self-driving car awesomeness! 
