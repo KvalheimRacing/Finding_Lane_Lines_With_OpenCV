@@ -119,8 +119,8 @@ As a consequence of all these shortcomings, we can see that the algorithm goes b
 
 ## The good things
 
-* Using HSV gave me a more accurate value for yellow, boosted the "visability" some, just what I needed to get the little extra, for handeling the challenge video.
-* The memory part was nessesary and good
+* Using HSV gave me a more accurate value for yellow, boosted the "visibility" some, just what I needed to get the little extra, for handling the challenge video.
+* The memory part was necessary and good
 * The algorithm is simple and short, easy to work with.
 * Got the Canny and Hough function working well on the required videos  
 
