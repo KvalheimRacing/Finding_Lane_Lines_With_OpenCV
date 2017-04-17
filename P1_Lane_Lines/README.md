@@ -19,7 +19,7 @@ The project requirements made by Udacity can be found [here](https://review.udac
 
 1. Get to know OpenCV (I really took the time to read up on the functions used).
 2. Use Hough transform to successfully identify the road lane.
-3. Create a good written report and discuss the methodology aswell as results.
+3. Create a good written report and discuss the methodology as well as results.
 
 
 ## The following are included:
