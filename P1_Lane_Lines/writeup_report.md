@@ -147,7 +147,7 @@ there are a few things I’d like to improve on.
 *
 
 If you enjoyed this post, please hit recommend! Follow me on Medium to know about my future projects\ 
-This is great — I’ll have a chance to work on this challenge in Project 4.
+This is great — I’ll have a chance to work on all of this in the advanced lane finding project.
 Stay tuned for more self-driving car awesomeness in the future!
 
 Went mental on one of the last challenge videos of udacitys p4
@@ -155,8 +155,8 @@ Went mental on one of the last challenge videos of udacitys p4
 I will work on a more advanced lane finding algorithm later on in May, so I will look into some papers regarding taking it to the nest level, specifically these ones;
 
 > [Robust And Real Time Detection Of Curvy Lanes With Desired Slopes For Driving Assistance And Autonomous Vehicles](https://arxiv.org/ftp/arxiv/papers/1501/1501.03124.pdf)
-> * [Real time Detection of Lane Markers in Urban Streets](http://www.vision.caltech.edu/malaa/publications/aly08realtime.pdf)
-> * [Lane detection and tracking using B-snake](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.106.6644&rep=rep1&type=pdf)
+[Real time Detection of Lane Markers in Urban Streets](http://www.vision.caltech.edu/malaa/publications/aly08realtime.pdf)
+[Lane detection and tracking using B-snake](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.106.6644&rep=rep1&type=pdf)
 
 ### Acknowledgement
 Thanks to Udacity for giving me the oppurtunity to begin a new journey in my life with top-talented professionals and students all over the world learning and researching SDC technologies.
@@ -166,3 +166,4 @@ Thanks to Udacity for giving me the oppurtunity to begin a new journey in my lif
 2. [Canny edge detection](https://en.wikipedia.org/wiki/Canny_edge_detector)
 3. [Hough transform](https://en.wikipedia.org/wiki/Hough_transform)
 4. [HSV](https://en.wikipedia.org/wiki/HSL_and_HSV)
+ll of this 
