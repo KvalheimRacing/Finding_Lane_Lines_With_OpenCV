@@ -9,18 +9,15 @@ The two main factions currently are the robotics approach and the end-to-end neu
 
 <div align="center">
    <br>
-  <img src="./images/sim_image.png"><br><br>
+  <img src="Processed_edge_img_solidYellowLeft.jpg"><br><br>
 </div>
 
-The goals of this project are:
+The goals of this project were:
 
 1. Create a pipeline in OpenCV to process video frames.
 2. Use the Hough transform to identify lane lines on the road.
 3. Create this written report to discuss the methodology and summarize the results.
 
-1. Get started
-   * Init needed files
-2. Draw conclutions for future work
 
  Convert frame to grayscale
 2) Create masks for yellow and white pixels
@@ -77,32 +74,32 @@ Test Image             |  Blurred
 ![finiced](https://github.com/KvalheimRacing/CarND/blob/master/P1_Lane_Lines/test_images_output/Processed_solidYellowLeft.jpg)
 
 
-(see [Jupyter Notebook]https://github.com/KvalheimRacing/CarND/blob/master/P1_Lane_Lines/P1_Lane_Lines.ipynb) for more details)
+(see [Jupyter Notebook](https://github.com/KvalheimRacing/CarND/blob/master/P1_Lane_Lines/P1_Lane_Lines.ipynb) for more details))
 
 # Parameters
 
-* `α = 0.9`                 # Weight factor for initial image
-* `β = 0.4`                 # Weight factor for new image
-* `λ = 0.22`                # Scalar added to each sum (of new and initial image), see weighted_img function
-* `kernel_size = 7`         # Size of the n x n (2D) matrix used as kernel in gaussian blur. Must be an odd positive integer.
-* `low_threshold = 50`      # Value for the canny function, defining the first threshold - lower hysteresis bound.
-* `high_threshold = 150`    # Value for the canny function, defining the second threshold - upper hysteresis bound.
-* `hist_frames = 10`        # History of how many frames back to remember lane lines
-* `rho = 1`                 # Distance resolution in pixels of the Hough grid
-* `theta = np.pi/90`        # Angular resolution in radians of the Hough grid
-* `threshold = 15`          # Minimum number of votes (intersections in Hough grid cell)
-* `min_line_length = 70`    # Minimum number of pixels in a line
-* `max_line_gap = 180`      # Maximum gap in pixels between connectable line segments
-* `min_slope_value = 0.4`   # Defining the minimum slope value. Lines under this value is not lane lines.
-* `left_line_stack = []`    # For keeping a stack of left lines
-* `right_line_stack = []`   # For keeping a stack of right lines
-* `left_line_history = []`  # For keeping a history of left lines, if there is no left lines
-* `right_line_history = []` # For keeping a history of right lines, if there is no right lines
-* `H = img.shape[0]`        # Getting the hight of the image
-* `Hr = H*0.6`              # Reducing the hight
-* `W = img.shape[1]`        # Getting the width of the image
-* `ly = np.array([20, 100, 100], dtype = "uint8")` # Low lalue for yellow HSV.
-* `uy = np.array([30, 255, 255], dtype = "uint8")` # Hig value for yellow HSV.
+* `α = 0.9`                  Weight factor for initial image
+* `β = 0.4`                  Weight factor for new image
+* `λ = 0.22`                 Scalar added to each sum (of new and initial image), see weighted_img function
+* `kernel_size = 7`          Size of the n x n (2D) matrix used as kernel in gaussian blur. Must be an odd positive integer.
+* `low_threshold = 50`       Value for the canny function, defining the first threshold - lower hysteresis bound.
+* `high_threshold = 150`     Value for the canny function, defining the second threshold - upper hysteresis bound.
+* `hist_frames = 10`         History of how many frames back to remember lane lines
+* `rho = 1`                  Distance resolution in pixels of the Hough grid
+* `theta = np.pi/90`         Angular resolution in radians of the Hough grid
+* `threshold = 15`           Minimum number of votes (intersections in Hough grid cell)
+* `min_line_length = 70`     Minimum number of pixels in a line
+* `max_line_gap = 180`       Maximum gap in pixels between connectable line segments
+* `min_slope_value = 0.4`    Defining the minimum slope value. Lines under this value is not lane lines.
+* `left_line_stack = []`     For keeping a stack of left lines
+* `right_line_stack = []`    For keeping a stack of right lines
+* `left_line_history = []`   For keeping a history of left lines, if there is no left lines
+* `right_line_history = []`  For keeping a history of right lines, if there is no right lines
+* `H = img.shape[0]`         Getting the hight of the image
+* `Hr = H*0.6`               Reducing the hight
+* `W = img.shape[1]`         Getting the width of the image
+* `ly = np.array([20, 100, 100], dtype = "uint8")`  Low lalue for yellow HSV.
+* `uy = np.array([30, 255, 255], dtype = "uint8")`  Hig value for yellow HSV.
 
 
 
@@ -152,6 +149,9 @@ Attemt to reconstruct 3d image (at lease depth of lanes) by modeling scene const
 Use object recognition to reject lines belonging to recognised objects 
 
 a deep learning model?
+
+
+# conclutions for future work
 
 there are a few things I’d like to improve on.
 
