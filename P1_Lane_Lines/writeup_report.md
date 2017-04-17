@@ -54,7 +54,7 @@ The final test of the algorithm was on the videos below. I spent some time tunin
 ### Challenge
 [![challenge 2](https://github.com/KvalheimRacing/CarND/blob/master/P1_Lane_Lines/test_videos_output/challenge16.gif)](https://www.youtube.com/watch?v=rM0yoBgP2O0&feature=youtu.be)
 
-> I managed to get some ok results in the videos aswell as on the pictures. There was one more challenge [video](https://github.com/KvalheimRacing/CarND/blob/master/P1_Lane_Lines/test_videos_output/challenge18.gif) were the algoritm has no chance, I > will talk about this in the reflections below.
+> I managed to get some ok results in the videos aswell as on the pictures. There was one more challenge [video](https://github.com/KvalheimRacing/CarND/blob/master/P1_Lane_Lines/test_videos_output/challenge18.gif) were the algoritm had no chance, I  will talk about this in the reflections below.
 
 
 
