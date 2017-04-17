@@ -2,7 +2,7 @@
 
 ## Introduction
 
-When we drive, we use our eyes to decide where to go. The lines on the road that show us where the lanes are act as our constant reference for where to steer the vehicle. Naturally, one of the first things we would like to do in developing a self-driving car is to automatically detect lane lines using an algorithm.
+When you drive, you use your eyes to observe your surroundings. The lines on the road show you where the lanes are, and they act as a constant reference for where to steer the vehicle. Naturally, one of the first things we would like to do in developing a self-driving car is to automatically detect lane lines using an algorithm.
 
 
 ## How I did it
@@ -12,6 +12,7 @@ When we drive, we use our eyes to decide where to go. The lines on the road that
   <img src="test_videos_output\solidWhiteRight.gif"><br><br>
 </div>
 
+This project is the first among several 
 
 ### Pipeline
 1) Convert image to grayscale
@@ -46,9 +47,6 @@ dfgasdfg
 dfgdafg
 
 
-### Solid White
-[![solidWhiteRight](https://github.com/KvalheimRacing/CarND/blob/master/P1_Lane_Lines/test_videos_output/solidWhiteRight.gif)](https://www.youtube.com/watch?v=W81-SgZLCMQ&feature=youtu.be)
-
 ### Solid Yellow
 [![solidYellowLeft](https://github.com/KvalheimRacing/CarND/blob/master/P1_Lane_Lines/test_videos_output/solidYellowLeft.gif)](https://www.youtube.com/watch?v=ZocZa1NPjHo&feature=youtu.be)
 
@@ -58,7 +56,7 @@ dfgdafg
 ### Challenge
 [![challenge 2](https://github.com/KvalheimRacing/CarND/blob/master/P1_Lane_Lines/test_videos_output/challenge16.gif)](https://www.youtube.com/watch?v=rM0yoBgP2O0&feature=youtu.be)
 
-
+> I managed to get some ok results in the videos aswell as on the pictures. There was one more challenge [video](https://github.com/KvalheimRacing/CarND/blob/master/P1_Lane_Lines/test_videos_output/challenge18.gif) were the algoritm has no chance, I > will talk about this in the reflections below.
 
 
 
@@ -158,9 +156,8 @@ Went mental on one of the last challenge videos of udacitys p4
 I will work on a more advanced lane finding algorithm later on in May, so I will look into some papers regarding taking it to the nest level, specifically these ones;
 
 > [Robust And Real Time Detection Of Curvy Lanes With Desired Slopes For Driving Assistance And Autonomous Vehicles](https://arxiv.org/ftp/arxiv/papers/1501/1501.03124.pdf)
-> [Real time Detection of Lane Markers in Urban Streets](http://www.vision.caltech.edu/malaa/publications/aly08realtime.pdf)
-> [Lane detection and tracking using B-snake](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.106.6644&rep=rep1&type=pdf)
-
+> * [Real time Detection of Lane Markers in Urban Streets](http://www.vision.caltech.edu/malaa/publications/aly08realtime.pdf)
+> * [Lane detection and tracking using B-snake](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.106.6644&rep=rep1&type=pdf)
 
 ### Acknowledgement
 Thanks to Udacity for giving me the oppurtunity to begin a new journey in my life with top-talented professionals and students all over the world learning and researching for SDC technologies.
@@ -170,3 +167,4 @@ Thanks to Udacity for giving me the oppurtunity to begin a new journey in my lif
 2. [Canny edge detection](https://en.wikipedia.org/wiki/Canny_edge_detector)
 3. [Hough transform](https://en.wikipedia.org/wiki/Hough_transform)
 4. [HSV](https://en.wikipedia.org/wiki/HSL_and_HSV)
+5. [Galen Ballew on GIT, for HSV vaule tuning](https://github.com/galenballew/SDC-Lane-and-Vehicle-Detection-Tracking/blob/master/Part%20I%20-%20Simple%20Lane%20Detection/P1.ipynb)
