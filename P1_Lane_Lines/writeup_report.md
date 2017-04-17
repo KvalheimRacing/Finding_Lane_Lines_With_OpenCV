@@ -129,7 +129,7 @@ As a cosequence of all these shortcomings, we can see that the algorithm goes ba
 
 <div align="center">
    <br>
-  <img src="images\uk.jpg"><br><br>
+  <img src="..images\uk.jpg"><br><br>
 </div>
 
 
