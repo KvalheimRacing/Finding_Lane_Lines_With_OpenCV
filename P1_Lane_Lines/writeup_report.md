@@ -43,8 +43,7 @@ Test Image             |  1.Gray
 
 
 > You can find the rest of the pictures [here](https://github.com/KvalheimRacing/CarND/tree/master/P1_Lane_Lines/test_images_output)
-
-The final test of the algorith was on these videos:
+The final test of the algorithm was on the videos below. I spent some time tuning the parameters, especially how many lanes which gets stored in `hist_frames`. Found out that the ideal value was around 10-20. I also tried a lot of values on thecanny function and the hough transform, from other solutions, but with no luck of improwing the result shown here further.
 
 ### Solid Yellow
 [![solidYellowLeft](https://github.com/KvalheimRacing/CarND/blob/master/P1_Lane_Lines/test_videos_output/solidYellowLeft.gif)](https://www.youtube.com/watch?v=ZocZa1NPjHo&feature=youtu.be)
@@ -138,7 +137,7 @@ Use object recognition to reject lines belonging to recognised objects
 
 
 
-# conclutions for future work
+# Conclutions for future work
 
 there are a few things I’d like to improve on.
 
@@ -159,7 +158,7 @@ I will work on a more advanced lane finding algorithm later on in May, so I will
 > * [Lane detection and tracking using B-snake](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.106.6644&rep=rep1&type=pdf)
 
 ### Acknowledgement
-Thanks to Udacity for giving me the oppurtunity to begin a new journey in my life with top-talented professionals and students all over the world learning and researching for SDC technologies.
+Thanks to Udacity for giving me the oppurtunity to begin a new journey in my life with top-talented professionals and students all over the world learning and researching SDC technologies.
 
 # References & Resources
 1. [Comma.ai steering model](https://github.com/commaai/research/blob/master/train_steering_model.py)
