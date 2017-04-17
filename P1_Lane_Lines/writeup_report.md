@@ -148,7 +148,7 @@ There are a few things I’d like to improve.
 
 
 
-Another udacity student, [Kirill Danilyuk](https://github.com/Kidra521/carnd/blob/master/p1_lane_lines_detection/P1.ipynb) has a very good solution implementing classes for lane lines, I think this is a good inspiration for everyone that is considering this approach. So I will definetly be checking that code out with regards to ROI.
+Another udacity student, [Kirill Danilyuk](https://github.com/Kidra521/carnd/blob/master/p1_lane_lines_detection/P1.ipynb) has a very good solution implementing classes for lane lines, I think this is a good inspiration for everyone that is considering this approach. So I will definetly be checking out that code with regards to ROI.
 
 ***
 
