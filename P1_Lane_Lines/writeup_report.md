@@ -10,7 +10,7 @@ When you drive, you use your eyes to observe your surroundings. The lines on the
 </div>
 
 This project is the first among several projects in the [Self Driving Car Engineer](https://www.udacity.com/course/self-driving-car-engineer-nanodegree--nd013) program at Udacity. Here we learn cutting edge technology equiping us with the tools for a career in the field of Self Driving Cars. 
-Udacity calls it a "Nanodegree", but it lasts over 9 months, and with all the hours I am putting into teaching myeself this as good as I can, it really becomes a full education for me. So that brings me to this project, which was so much fun I just had to stop myself, I could go on forever, there is always something in to do better, and so much good Inspiration! 
+Udacity calls it a "Nanodegree", but it lasts over 9 months and with all the hours I am putting into teaching myeself this, it really becomes a full education for me. So that brings me to this project, which was so much fun I just had to stop myself, I could go on forever, there is always something to do better, and so much good Inspiration! 
 
 With that said, below is a brief explenation of the pipeline which you can find [here](https://github.com/KvalheimRacing/CarND/blob/master/P1_Lane_Lines/P1_Lane_Lines.ipynb). 
 
