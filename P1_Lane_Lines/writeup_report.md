@@ -22,6 +22,9 @@ The goals of this project are:
    * Init needed files
 2. Draw conclutions for future work
 
+ Convert frame to grayscale
+2) Create masks for yellow and white pixels
+3) Apply a Gaussian smoothing
 
 Convert RGB to grayscale
 2. Apply a slight Gaussian blur
@@ -33,11 +36,9 @@ Convert RGB to grayscale
 Use a gaussian kernel to filter the image
 This helps in getting rid of noisy parts of the image which makes the next steps more reliable
 Perform canny edge detection
-This step basically detects the edges in the image with the help of the image gradient and hysteris (see here for more details)
+This step basically detects the edges in the image with the help of the image gradient and hysteris (see [here](https://en.wikipedia.org/wiki/Canny_edge_detector) for more details)
 Use hough transformation to find lines from the edges
-Transforms each point to a line in hough space where the intersection of these lines shows the presence of a line in image space (see here)
-
-https://en.wikipedia.org/wiki/Hough_transform
+Transforms each point to a line in hough space where the intersection of these lines shows the presence of a line in image space (see [here](https://en.wikipedia.org/wiki/Hough_transform))
 
 Convert image to grayscale
 Apply Gaussian blur
@@ -70,17 +71,28 @@ Test Image             |  Blurred
 * Batch size: 128 (tried 64, 128, 256, 1024)
 * Adam optimizer
 
+- `kernel_size`, Gaussian blur in 2D with square kernel. Must be an odd positive integer.
+- `lkernel_size`, Laplacian to enhance edges. Kernel size must be an odd positive integer.
+- `canny_lower_threshold`, Canny edge detection, lower hysteresis bound.
+- `canny_upper_threshold`, Canny edge detection, upper hysteresis bound.
+- `rho`, distance resolution of the Hough accumulator in pixels.
+- `theta`, angular resolution of the Hough accumulator in radians.
+- `threshold`, Hough accumulator voting threshold for peak values.
+- `min_line_length`, minimum line length to be considered by cv2.HoughLinesP().
+- `max_line_gap`, maximum line length to be considered by cv2.HoughLinesP()
 
 # Reflections
 
 > This bring me to the other rule of thumb, **every problem will have tradeoffs**. The question becomes what are the tradeoffs you are willing to make? This will depend on the case you are solving!
 
-to counter for jumping, I made a history of lines
+to counter for jumping, I made a history of lines ant took the average
 create a buffer of slope and y-intercept values for the last N frames and to overlay a line whose parameters are a rolling mean of these values. This should smooth out the jitter and give the pipeline a "memory" so that if no line segments are detected, it could continue to overlay the last calculated line until another is found.
 
+Convert RGB to [HSV](https://en.wikipedia.org/wiki/HSL_and_HSV) and work with that for getting stronger yellow area in challenge video, then do canny. but that is a hard coded approatch...  
 
 The algorithm I created is likely overfitted to the data available in this project
 
+could averiging over more hough lines by editing thresholds, but that would result in performance loss from tre algorithm.
 
 While it's cool that the code is able to detect lines, this approach is full of compromises and I would not ever use it in real life! :-)
 
@@ -116,6 +128,7 @@ a deep learning model?
 
 Implement GUI for parameter tuning in this [article](https://medium.com/@maunesh/finding-the-right-parameters-for-your-computer-vision-algorithm-d55643b6f954)
 
+If you enjoyed this post, please hit recommend! Follow me on Medium to know about my future projects.
 
 Acknowledgement
 Thanks to Udacity staff for giving me the oppurtunity to begin a new journey in my life with top-talented professionals and students all over the world learning and researching for SDC technologies.
