@@ -28,8 +28,8 @@ With that said, below is a brief explanation of the pipeline which you can find 
 6) Retrieve probabilistic Hough lines and make a lane filling from line segments, with `cv2.HoughLinesP()` ++
    * Separating the lines into left and right lines respectively
    * Here I also make a history of lines, separate and averages all the different lines I get from the Hough function
-7) Merge the lane filling with the original image with `cv2.addWeighted()`
-   * Using an addWheighted() function, see [`α β λ`](writeup_report.md#parameters) below
+7) Merge the lane filling with the original image
+   * Using an [`cv2.addWeighted()`](http://docs.opencv.org/2.4.8/modules/core/doc/operations_on_arrays.html#addweighted) function, see [`α β λ`](writeup_report.md#parameters) below
 
 ***
 
