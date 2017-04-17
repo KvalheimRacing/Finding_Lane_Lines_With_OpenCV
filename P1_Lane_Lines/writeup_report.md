@@ -4,15 +4,15 @@
 
 When you drive, you use your eyes to observe your surroundings. The lines on the road show you where the lanes are, and they act as a constant reference for where to steer the vehicle. Naturally, one of the first things we would like to do in developing a self-driving car is to automatically detect lane lines using an algorithm.
 
-
-## How I did it
-
 <div align="center">
    <br>
   <img src="test_videos_output\solidWhiteRight.gif"><br><br>
 </div>
 
-This project is the first among several 
+This project is the first among several projects in the [Self Driving Car Engineer](https://www.udacity.com/course/self-driving-car-engineer-nanodegree--nd013) program from Udacity. Here we learn cutting edge technology equiping us with the tools for a career in the field of Self Driving Cars. 
+Udacity calls it a "Nanodegree", but it lasts over 9 months, and with all the hours I am putting into teaching myeself this as good as I can, it really becomes a full education for me. So that brings me to this project, which was so much fun I just had to stop myself, I could go on forever, there is always something in to do better, and so much good Inspiration! 
+
+With that said, below is a brief explenation of the pipeline which you can find [here](https://github.com/KvalheimRacing/CarND/blob/master/P1_Lane_Lines/P1_Lane_Lines.ipynb). 
 
 ### Pipeline
 1) Convert image to grayscale
@@ -23,9 +23,9 @@ This project is the first among several
    * This helps getting rid of noisy parts of the image which makes the next steps more reliable
 4) Run a Canny edge function
    * This step detects edges in the image with the help of the gradient and hysteris
-5) Apply a ROI (region of interest) and mask away the undesired regions
+5) Apply a ROI (region of interest) and mask only what we want
    * See the variable [vertices](https://github.com/KvalheimRacing/CarND/blob/master/P1_Lane_Lines/P1_Lane_Lines.ipynb) for more details
-6) Retrieve probabilistic Hough lines and make a lane filling fromline segments
+6) Retrieve probabilistic Hough lines and make a lane filling from line segments
    * Separating the lines into left and righ lines respectively
    * Here I also make a history of lines, separate and averiges all the different lines I get from the hough function
 7) Merge the lane filling with the original image
@@ -42,10 +42,9 @@ Test Image             |  1.Gray
 ![lane](https://github.com/KvalheimRacing/CarND/blob/master/P1_Lane_Lines/test_images_output/Processed_lane_img_solidYellowLeft.jpg)|![finiced](https://github.com/KvalheimRacing/CarND/blob/master/P1_Lane_Lines/test_images_output/Processed_solidYellowLeft.jpg)
 
 
-dfgsdfg
-dfgasdfg
-dfgdafg
+> You can find the rest of the pictures [here](https://github.com/KvalheimRacing/CarND/tree/master/P1_Lane_Lines/test_images_output)
 
+The final test of the algorith was on these videos:
 
 ### Solid Yellow
 [![solidYellowLeft](https://github.com/KvalheimRacing/CarND/blob/master/P1_Lane_Lines/test_videos_output/solidYellowLeft.gif)](https://www.youtube.com/watch?v=ZocZa1NPjHo&feature=youtu.be)
@@ -167,4 +166,3 @@ Thanks to Udacity for giving me the oppurtunity to begin a new journey in my lif
 2. [Canny edge detection](https://en.wikipedia.org/wiki/Canny_edge_detector)
 3. [Hough transform](https://en.wikipedia.org/wiki/Hough_transform)
 4. [HSV](https://en.wikipedia.org/wiki/HSL_and_HSV)
-5. [Galen Ballew on GIT, for HSV vaule tuning](https://github.com/galenballew/SDC-Lane-and-Vehicle-Detection-Tracking/blob/master/Part%20I%20-%20Simple%20Lane%20Detection/P1.ipynb)
