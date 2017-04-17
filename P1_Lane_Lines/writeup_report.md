@@ -173,4 +173,4 @@ Thanks to Udacity for giving me the oppurtunity to begin a new journey in my lif
 4. [HSV](https://en.wikipedia.org/wiki/HSL_and_HSV)
 5. [Gallen Ballew - for awesome HSV parameters!](https://github.com/galenballew/SDC-Lane-and-Vehicle-Detection-Tracking/blob/master/Part%20I%20-%20Simple%20Lane%20Detection/P1.ipynb)
 
-If you enjoyed this post, please star, like or recommend! :) Follow me on Medium and Git to stay tuned for more self-driving car awesomeness! 
+If you enjoyed this post, please star, like or recommend! :) Follow me on Medium and Git to stay tuned for more self-driving car related awesome stuff! 
