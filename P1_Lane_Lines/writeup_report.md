@@ -53,9 +53,9 @@ Lane                    | Result
 
 check parameters [below](WRITEUP.md#drawing-lines)
 
-![Demo](https://github.com/KvalheimRacing/CarND/blob/master/P1_Lane_Lines/test_videos_output/solidWhiteRight.gif)
+[![solidWhiteRight](https://github.com/KvalheimRacing/CarND/blob/master/P1_Lane_Lines/test_videos_output/solidWhiteRight.gif)](https://www.youtube.com/watch?v=W81-SgZLCMQ&feature=youtu.be)
 
-![Demo2](https://github.com/KvalheimRacing/CarND/blob/master/P1_Lane_Lines/test_videos_output/solidYellowLeft.gif)
+[![solidYellowLeft](https://github.com/KvalheimRacing/CarND/blob/master/P1_Lane_Lines/test_videos_output/solidYellowLeft.gif)](https://www.youtube.com/watch?v=ZocZa1NPjHo&feature=youtu.be)
 
 ![Demo2](https://github.com/KvalheimRacing/CarND/blob/master/P1_Lane_Lines/test_videos_output/solidYellowLeft.gif)
 
@@ -64,7 +64,7 @@ check parameters [below](WRITEUP.md#drawing-lines)
 ![Demo2](https://github.com/KvalheimRacing/CarND/blob/master/P1_Lane_Lines/test_videos_output/solidYellowLeft.gif)
 
 ### Video White
-[![Video White](https://github.com/KvalheimRacing/CarND/blob/master/P1_Lane_Lines/test_videos_output/solidWhiteRight.gif)](https://youtu.be/bajgiQuEc38)
+
 
 
 
@@ -168,3 +168,5 @@ Thanks to Udacity staff for giving me the oppurtunity to begin a new journey in 
 
 # References
 1. [Comma.ai steering model](https://github.com/commaai/research/blob/master/train_steering_model.py)
+2. [Canny edge detection](https://en.wikipedia.org/wiki/Canny_edge_detector)
+3. [Hough transform](
