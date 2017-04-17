@@ -18,7 +18,7 @@ With that said, below is a brief explanation of the pipeline which you can find 
 1) Convert image to gray-scale with [`cv2.cvtColor(img, cv2.COLOR_RGB2GRAY)`](http://docs.opencv.org/2.4.8/modules/imgproc/doc/miscellaneous_transformations.html#cvtcolor)
    * Like all the functions under, this comes straight out of openCV
 2) Convert from RGB to HSV color space with [`cv2.cvtColor(img, cv2.COLOR_RGB2HSV)`](http://docs.opencv.org/2.4.8/modules/imgproc/doc/miscellaneous_transformations.html#cvtcolor)
-   * HSV separates luma, (image intensity), from chroma (the color information). This means that it's easier for us to detect dark yellow lines.
+   * HSV separates luma, (image intensity), from chroma (the color information). This means that it can be easier for us to detect dark yellow lines.
 3) Apply a low pass filter, Gaussian kernel -> [`cv2.GaussianBlur()`](http://docs.opencv.org/2.4.8/modules/imgproc/doc/filtering.html#gaussianblur)
    * This helps getting rid of noisy parts of the image which makes the next steps more reliable
 4) Run a Canny edge function -> [`cv2.Canny()`](http://docs.opencv.org/2.4/modules/imgproc/doc/feature_detection.html?#canny)
