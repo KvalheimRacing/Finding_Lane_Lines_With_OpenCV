@@ -62,48 +62,49 @@ Test Image             |  Blurred
 ### Video White
 [![Video White](https://github.com/KvalheimRacing/CarND/blob/master/P1_Lane_Lines/test_videos_output/solidWhiteRight.gif)](https://youtu.be/bajgiQuEc38)
 
+![gray](https://github.com/KvalheimRacing/CarND/blob/master/P1_Lane_Lines/test_images_output/Processed_gray_img_solidYellowLeft.jpg)
 
-(see [Jupyter Notebook](https://github.com/CYHSM/carnd/blob/master/CarND-LaneLines-P1/P1.ipynb) for more details)
+![blur](https://github.com/KvalheimRacing/CarND/blob/master/P1_Lane_Lines/test_images_output/Processed_blur_img_solidYellowLeft.jpg)
 
-# Hyperparameters
+![canny](https://github.com/KvalheimRacing/CarND/blob/master/P1_Lane_Lines/test_images_output/Processed_edge_img_solidYellowLeft.jpg)
 
-* Learning rate: 1e-1 (very aggressive!)
-* Batch size: 128 (tried 64, 128, 256, 1024)
-* Adam optimizer
+![masked](https://github.com/KvalheimRacing/CarND/blob/master/P1_Lane_Lines/test_images_output/Processed_maskd_img_solidYellowLeft.jpg)
 
-# Nessesary variables
-α = 0.9                 # Weight factor for initial image
-β = 0.4                 # Weight factor for new image
-λ = 0.22                # Scalar added to each sum (of new and initial image), see weighted_img function
-kernel_size = 7         # Size of the n x n matrix used as kernel in gaussian blur
-low_threshold = 50      # Value for the canny function, defining the first threshold
-high_threshold = 150    # Value for the canny function, defining the second threshold
-hist_frames = 10        # History of how many frames back to remember lane lines
-rho = 1                 # Distance resolution in pixels of the Hough grid
-theta = np.pi/90        # Angular resolution in radians of the Hough grid
-threshold = 15          # Minimum number of votes (intersections in Hough grid cell)
-min_line_length = 70    # Minimum number of pixels in a line
-max_line_gap = 180      # Maximum gap in pixels between connectable line segments
-min_slope_value = 0.4   # Defining the minimum slope value. Lines under this value is not lane lines.
-left_line_stack = []    # For keeping a stack of left lines
-right_line_stack = []   # For keeping a stack of right lines
-left_line_history = []  # For keeping a history of left lines, if there is no left lines
-right_line_history = [] # For keeping a history of right lines, if there is no right lines
-H = img.shape[0]        # Getting the hight of the image
-Hr = H*0.6              # Reducing the hight
-W = img.shape[1]        # Getting the width of the image
-ly = np.array([20, 100, 100], dtype = "uint8") # Low lalue for yellow HSV.
-uy = np.array([30, 255, 255], dtype = "uint8") # Hig value for yellow HSV.
+![hough](https://github.com/KvalheimRacing/CarND/blob/master/P1_Lane_Lines/test_images_output/Processed_hough_img_solidYellowLeft.jpg)
 
-- `kernel_size`, Gaussian blur in 2D with square kernel. Must be an odd positive integer.
-- `lkernel_size`, Laplacian to enhance edges. Kernel size must be an odd positive integer.
-- `canny_lower_threshold`, Canny edge detection, lower hysteresis bound.
-- `canny_upper_threshold`, Canny edge detection, upper hysteresis bound.
-- `rho`, distance resolution of the Hough accumulator in pixels.
-- `theta`, angular resolution of the Hough accumulator in radians.
-- `threshold`, Hough accumulator voting threshold for peak values.
-- `min_line_length`, minimum line length to be considered by cv2.HoughLinesP().
-- `max_line_gap`, maximum line length to be considered by cv2.HoughLinesP()
+![lane](https://github.com/KvalheimRacing/CarND/blob/master/P1_Lane_Lines/test_images_output/Processed_lane_img_solidYellowLeft.jpg)
+
+![finiced](https://github.com/KvalheimRacing/CarND/blob/master/P1_Lane_Lines/test_images_output/Processed_solidYellowLeft.jpg)
+
+
+(see [Jupyter Notebook]https://github.com/KvalheimRacing/CarND/blob/master/P1_Lane_Lines/P1_Lane_Lines.ipynb) for more details)
+
+# Parameters
+
+* `α = 0.9`                 # Weight factor for initial image
+* `β = 0.4`                 # Weight factor for new image
+* `λ = 0.22`                # Scalar added to each sum (of new and initial image), see weighted_img function
+* `kernel_size = 7`         # Size of the n x n (2D) matrix used as kernel in gaussian blur. Must be an odd positive integer.
+* `low_threshold = 50`      # Value for the canny function, defining the first threshold - lower hysteresis bound.
+* `high_threshold = 150`    # Value for the canny function, defining the second threshold - upper hysteresis bound.
+* `hist_frames = 10`        # History of how many frames back to remember lane lines
+* `rho = 1`                 # Distance resolution in pixels of the Hough grid
+* `theta = np.pi/90`        # Angular resolution in radians of the Hough grid
+* `threshold = 15`          # Minimum number of votes (intersections in Hough grid cell)
+* `min_line_length = 70`    # Minimum number of pixels in a line
+* `max_line_gap = 180`      # Maximum gap in pixels between connectable line segments
+* `min_slope_value = 0.4`   # Defining the minimum slope value. Lines under this value is not lane lines.
+* `left_line_stack = []`    # For keeping a stack of left lines
+* `right_line_stack = []`   # For keeping a stack of right lines
+* `left_line_history = []`  # For keeping a history of left lines, if there is no left lines
+* `right_line_history = []` # For keeping a history of right lines, if there is no right lines
+* `H = img.shape[0]`        # Getting the hight of the image
+* `Hr = H*0.6`              # Reducing the hight
+* `W = img.shape[1]`        # Getting the width of the image
+* `ly = np.array([20, 100, 100], dtype = "uint8")` # Low lalue for yellow HSV.
+* `uy = np.array([30, 255, 255], dtype = "uint8")` # Hig value for yellow HSV.
+
+
 
 # Reflections
 
@@ -152,12 +153,15 @@ Use object recognition to reject lines belonging to recognised objects
 
 a deep learning model?
 
+there are a few things I’d like to improve on.
+
 Implement GUI for parameter tuning in this [article](https://medium.com/@maunesh/finding-the-right-parameters-for-your-computer-vision-algorithm-d55643b6f954)
 
 If you enjoyed this post, please hit recommend! Follow me on Medium to know about my future projects.
 This is great — I’ll have a chance to work on this challenge in Project 4.
 Stay tuned for more self-driving car awesomeness in the future!
 
+Went mental on one of the last challenge videos of udacitys p4
 
 Acknowledgement
 Thanks to Udacity staff for giving me the oppurtunity to begin a new journey in my life with top-talented professionals and students all over the world learning and researching for SDC technologies.
