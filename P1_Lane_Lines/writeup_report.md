@@ -9,26 +9,18 @@ The two main factions currently are the robotics approach and the end-to-end neu
 
 <div align="center">
    <br>
-  <img src="Processed_edge_img_solidYellowLeft.jpg"><br><br>
+  <img src="test_images_output\Processed_edge_img_solidYellowLeft.jpg"><br><br>
 </div>
 
-The goals of this project were:
 
-1. Create a pipeline in OpenCV to process video frames.
-2. Use the Hough transform to identify lane lines on the road.
-3. Create this written report to discuss the methodology and summarize the results.
-
-
- Convert frame to grayscale
+## Pipeline
+1) Convert image to grayscale
 2) Create masks for yellow and white pixels
-3) Apply a Gaussian smoothing
-
-Convert RGB to grayscale
-2. Apply a slight Gaussian blur
-3. Perform Canny edge detection
-4. Define a region of interest and mask away the undesired portions of the image
-5. Retrieve Hough lines 
-6. Apply lines to the original image
+3) Apply a slight Gaussian blur
+4) Perform Canny edge detection
+5) Define a region of interest and mask away the undesired portions of the image
+6) Retrieve Hough lines 
+7) Apply lines to the original image
 
 Use a gaussian kernel to filter the image
 This helps in getting rid of noisy parts of the image which makes the next steps more reliable
@@ -44,9 +36,9 @@ Apply polygon mask to eliminate non relevant noise
 Apply probabilistic Hough transform to detect line segments
 Separate the line segments into Left and Right buckets, and fit a single line to each bucket of points
 
-Test Image             |  Blurred
+Test Image             |  Gray
 :-------------------------:|:-------------------------:
-![](https://github.com/CYHSM/carnd/blob/master/CarND-LaneLines-P1/test_images/pipeline/original.jpg?raw=true)  |  ![](https://github.com/CYHSM/carnd/blob/master/CarND-LaneLines-P1/test_images/pipeline/blur.jpg?raw=true)
+![](https://github.com/KvalheimRacing/CarND/blob/master/P1_Lane_Lines/test_images/solidYellowLeft.jpg)  |  ![](https://github.com/KvalheimRacing/CarND/blob/master/P1_Lane_Lines/test_images_output/Processed_gray_img_solidYellowLeft.jpg)
 
 
 
