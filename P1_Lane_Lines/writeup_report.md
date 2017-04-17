@@ -29,7 +29,7 @@ With that said, below is a brief explenation of the pipeline which you can find 
    * Separating the lines into left and righ lines respectively
    * Here I also make a history of lines, separate and averiges all the different lines I get from the hough function
 7) Merge the lane filling with the original image
-   * Using an addWheighted() function, see [`α β λ`](writeup_report.md# Parameters) below
+   * Using an addWheighted() function, see [`α β λ`](writeup_report.md#parameters) below
 
 Test Image             |  1.Gray
 :-------------------------:|:-------------------------:
