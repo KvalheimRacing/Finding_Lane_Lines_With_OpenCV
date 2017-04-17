@@ -2,7 +2,7 @@
 
 ## Introduction
 
-What a time to be alive! The year is 2017, Donald Trump is president of the United States of America and autonomous vehicles are all the rage. Still at its infancy, the winning solution to dominate the mass production of autonomous vehicles are ongoing. 
+What a time to be alive! The year is 2017, Tesla is soon to realease model 3 and autonomous vehicles are all the rage. Still at its infancy, the winning solution to dominate the mass production of autonomous vehicles are ongoing. 
 The two main factions currently are the robotics approach and the end-to-end neural networks approach. Like the four seasons, the AI winter has come and gone. It's Spring and this is the story of one man's attempt to explore the pros and cons of the end-to-end neural networks faction in a controlled environment. The hope is to draw some conclusions that will help the greater community advance as a whole.
 
 ## How I did it
@@ -71,6 +71,30 @@ Test Image             |  Blurred
 * Batch size: 128 (tried 64, 128, 256, 1024)
 * Adam optimizer
 
+# Nessesary variables
+α = 0.9                 # Weight factor for initial image
+β = 0.4                 # Weight factor for new image
+λ = 0.22                # Scalar added to each sum (of new and initial image), see weighted_img function
+kernel_size = 7         # Size of the n x n matrix used as kernel in gaussian blur
+low_threshold = 50      # Value for the canny function, defining the first threshold
+high_threshold = 150    # Value for the canny function, defining the second threshold
+hist_frames = 10        # History of how many frames back to remember lane lines
+rho = 1                 # Distance resolution in pixels of the Hough grid
+theta = np.pi/90        # Angular resolution in radians of the Hough grid
+threshold = 15          # Minimum number of votes (intersections in Hough grid cell)
+min_line_length = 70    # Minimum number of pixels in a line
+max_line_gap = 180      # Maximum gap in pixels between connectable line segments
+min_slope_value = 0.4   # Defining the minimum slope value. Lines under this value is not lane lines.
+left_line_stack = []    # For keeping a stack of left lines
+right_line_stack = []   # For keeping a stack of right lines
+left_line_history = []  # For keeping a history of left lines, if there is no left lines
+right_line_history = [] # For keeping a history of right lines, if there is no right lines
+H = img.shape[0]        # Getting the hight of the image
+Hr = H*0.6              # Reducing the hight
+W = img.shape[1]        # Getting the width of the image
+ly = np.array([20, 100, 100], dtype = "uint8") # Low lalue for yellow HSV.
+uy = np.array([30, 255, 255], dtype = "uint8") # Hig value for yellow HSV.
+
 - `kernel_size`, Gaussian blur in 2D with square kernel. Must be an odd positive integer.
 - `lkernel_size`, Laplacian to enhance edges. Kernel size must be an odd positive integer.
 - `canny_lower_threshold`, Canny edge detection, lower hysteresis bound.
@@ -105,6 +129,8 @@ Or, it may fail in bad weather, such as rain or snow fog.
 roads without lanes (country roads or urban roads.)
 shadows
 
+Using HSV gave me a more accurate value for yellow,, and boosted it some.
+
 not in the middle of the road
 
 
@@ -129,6 +155,9 @@ a deep learning model?
 Implement GUI for parameter tuning in this [article](https://medium.com/@maunesh/finding-the-right-parameters-for-your-computer-vision-algorithm-d55643b6f954)
 
 If you enjoyed this post, please hit recommend! Follow me on Medium to know about my future projects.
+This is great — I’ll have a chance to work on this challenge in Project 4.
+Stay tuned for more self-driving car awesomeness in the future!
+
 
 Acknowledgement
 Thanks to Udacity staff for giving me the oppurtunity to begin a new journey in my life with top-talented professionals and students all over the world learning and researching for SDC technologies.
