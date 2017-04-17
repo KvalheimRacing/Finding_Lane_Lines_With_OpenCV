@@ -15,21 +15,23 @@ With that said, below is a brief explanation of the pipeline which you can find 
 
 
 ### Pipeline
-1) Convert image to gray-scale
+1) Convert image to gray-scale with `cv2.cvtColor(img, cv2.COLOR_RGB2GRAY)`
    * Like all the functions under, this comes straight out of openCV
-2) Convert from RGB to HSV color space
+2) Convert from RGB to HSV color space with `cv2.cvtColor(img, cv2.COLOR_RGB2HSV)`
    * HSV separates luma, (image intensity), from chroma (the color information). This means that it's easier for us to detect dark yellow lines.
-3) Apply a low pass filter, Gaussian kernel
+3) Apply a low pass filter, Gaussian kernel -> `cv2.GaussianBlur()`
    * This helps getting rid of noisy parts of the image which makes the next steps more reliable
-4) Run a Canny edge function
+4) Run a Canny edge function -> `cv2.Canny()`
    * This step detects edges in the image with the help of the gradient and hysteresis
-5) Apply a ROI (region of interest) and mask only what we want
+5) Apply a ROI (region of interest) and mask only what we want, by using `cv2.fillPoly()` and `cv2.bitwise_and()` 
    * See the variable [vertices](https://github.com/KvalheimRacing/CarND/blob/master/P1_Lane_Lines/P1_Lane_Lines.ipynb) for more details
-6) Retrieve probabilistic Hough lines and make a lane filling from line segments
+6) Retrieve probabilistic Hough lines and make a lane filling from line segments, with `cv2.HoughLinesP()` ++
    * Separating the lines into left and right lines respectively
    * Here I also make a history of lines, separate and averages all the different lines I get from the Hough function
-7) Merge the lane filling with the original image
+7) Merge the lane filling with the original image with `cv2.addWeighted()`
    * Using an addWheighted() function, see [`α β λ`](writeup_report.md#parameters) below
+
+***
 
 Input Image             |  1.Gray
 :-------------------------:|:-------------------------:
