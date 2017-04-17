@@ -1,7 +1,7 @@
 # Finding Lane Lines
 
 
-What a time to be alive! The year is 2017, Tesla is soon to realease model 3, revolutionize transoprt, and autonomous vehicles are the big focus of every major car manufacturer. The race for a winning solution to dominate the mass production of autonomous vehicles are on. 
+What a time to be alive! The year is 2017, Tesla is soon to release model 3, revolutionize transport, and autonomous vehicles are the big focus of every major car manufacturer. The race for a winning solution to dominate the mass production of autonomous vehicles are on. 
 The two main factions currently are the robotics approach and the end-to-end neural networks approach. 
 
 Like the four seasons, the AI winter has come and gone. It's Spring and this is the story of one man's attempt to explore the pros and cons of the end-to-end neural networks faction in a controlled environment. The hope is to draw some conclusions that will help the greater community advance as a whole.
