@@ -2,8 +2,8 @@
 
 ## Introduction
 
-What a time to be alive! The year is 2017, Tesla is soon to realease model 3 and autonomous vehicles are all the rage. Still at its infancy, the winning solution to dominate the mass production of autonomous vehicles are ongoing. 
-The two main factions currently are the robotics approach and the end-to-end neural networks approach. Like the four seasons, the AI winter has come and gone. It's Spring and this is the story of one man's attempt to explore the pros and cons of the end-to-end neural networks faction in a controlled environment. The hope is to draw some conclusions that will help the greater community advance as a whole.
+When we drive, we use our eyes to decide where to go. The lines on the road that show us where the lanes are act as our constant reference for where to steer the vehicle. Naturally, one of the first things we would like to do in developing a self-driving car is to automatically detect lane lines using an algorithm.
+
 
 ## How I did it
 
@@ -25,18 +25,10 @@ The two main factions currently are the robotics approach and the end-to-end neu
 5) Apply a ROI (region of interest) and mask away the undesired regions.
    * See the variable "vertices" in the [Jupyter Notebook](https://github.com/KvalheimRacing/CarND/blob/master/P1_Lane_Lines/P1_Lane_Lines.ipynb) for more details.
 6) Retrieve probabilistic Hough lines and make a lane filling fromline segments
-   * Here I also make a history of lines, and averiges all the different lines I get from the hough function
+   * Separating the lines into left and righ lines respectively
+   * Here I also make a history of lines, separate and averiges all the different lines I get from the hough function
 7) Merge the lane filling with the original image
    * Using an addWheighted() function, see [`α β λ` below](WRITEUP.md#Parameters)
-
-
-
- (see [here](https://en.wikipedia.org/wiki/Canny_edge_detector) for more details)
-Use hough transformation to find lines from the edges
-Transforms each point to a line in hough space where the intersection of these lines shows the presence of a line in image space (see [here](https://en.wikipedia.org/wiki/Hough_transform))
-
-
-Separate the line segments into Left and Right buckets, and fit a single line to each bucket of points
 
 Test Image             |  Gray
 :-------------------------:|:-------------------------:
@@ -139,29 +131,32 @@ Attemt to reconstruct 3d image (at lease depth of lanes) by modeling scene const
 
 Use object recognition to reject lines belonging to recognised objects 
 
-a deep learning model?
+
 
 
 # conclutions for future work
 
 there are a few things I’d like to improve on.
 
-Implement GUI for parameter tuning in this [article](https://medium.com/@maunesh/finding-the-right-parameters-for-your-computer-vision-algorithm-d55643b6f954)
+* Implement GUI for parameter tuning, got inspired by [this](https://medium.com/@maunesh/finding-the-right-parameters-for-your-computer-vision-algorithm-d55643b6f954) article
+* or Implement Deep Learning for either parameter tuning, or choosing optimal hough lines.
+*
 
-If you enjoyed this post, please hit recommend! Follow me on Medium to know about my future projects.
+If you enjoyed this post, please hit recommend! Follow me on Medium to know about my future projects\ 
 This is great — I’ll have a chance to work on this challenge in Project 4.
 Stay tuned for more self-driving car awesomeness in the future!
 
 Went mental on one of the last challenge videos of udacitys p4
 
-I will work on a more advanced lane finding algorithm later on in May, so I will look into some papers regarding taking it to the nest level, see the links below
+I will work on a more advanced lane finding algorithm later on in May, so I will look into some papers regarding taking it to the nest level, spesificly these ones;
 
-Acknowledgement
-Thanks to Udacity staff for giving me the oppurtunity to begin a new journey in my life with top-talented professionals and students all over the world learning and researching for SDC technologies.
+* [Robust And Real Time Detection Of Curvy Lanes With Desired Slopes For Driving Assistance And Autonomous Vehicles](https://arxiv.org/ftp/arxiv/papers/1501/1501.03124.pdf)
+* [Real time Detection of Lane Markers in Urban Streets](http://www.vision.caltech.edu/malaa/publications/aly08realtime.pdf)
+* [Lane detection and tracking using B-snake](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.106.6644&rep=rep1&type=pdf)
 
-- [Robust And Real Time Detection Of Curvy Lanes With Desired Slopes For Driving Assistance And Autonomous Vehicles](https://arxiv.org/ftp/arxiv/papers/1501/1501.03124.pdf)
-- [Real time Detection of Lane Markers in Urban Streets](http://www.vision.caltech.edu/malaa/publications/aly08realtime.pdf)
-- [Lane detection and tracking using B-snake](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.106.6644&rep=rep1&type=pdf)
+
+### Acknowledgement
+Thanks to Udacity for giving me the oppurtunity to begin a new journey in my life with top-talented professionals and students all over the world learning and researching for SDC technologies.
 
 # References & Resources
 1. [Comma.ai steering model](https://github.com/commaai/research/blob/master/train_steering_model.py)
