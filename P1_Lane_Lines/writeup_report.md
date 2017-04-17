@@ -1,4 +1,4 @@
-# Finding Lane Lines Project
+# Project Finding Lane Lines
 
 ## Introduction
 
@@ -13,7 +13,7 @@ The two main factions currently are the robotics approach and the end-to-end neu
 </div>
 
 
-## Pipeline
+### Pipeline
 1) Convert image to grayscale
 2) Create masks for yellow and white pixels
 3) Apply a slight Gaussian blur
@@ -48,10 +48,16 @@ Test Image             |  Gray
 
 ![Demo2](https://github.com/KvalheimRacing/CarND/blob/master/P1_Lane_Lines/test_videos_output/solidYellowLeft.gif)
 
+![Demo2](https://github.com/KvalheimRacing/CarND/blob/master/P1_Lane_Lines/test_videos_output/solidYellowLeft.gif)
+
+![Demo2](https://github.com/KvalheimRacing/CarND/blob/master/P1_Lane_Lines/test_videos_output/solidYellowLeft.gif)
+
+![Demo2](https://github.com/KvalheimRacing/CarND/blob/master/P1_Lane_Lines/test_videos_output/solidYellowLeft.gif)
+
 ### Video White
 [![Video White](https://github.com/KvalheimRacing/CarND/blob/master/P1_Lane_Lines/test_videos_output/solidWhiteRight.gif)](https://youtu.be/bajgiQuEc38)
 
-![gray](https://github.com/KvalheimRacing/CarND/blob/master/P1_Lane_Lines/test_images_output/Processed_gray_img_solidYellowLeft.jpg)
+
 
 ![blur](https://github.com/KvalheimRacing/CarND/blob/master/P1_Lane_Lines/test_images_output/Processed_blur_img_solidYellowLeft.jpg)
 
