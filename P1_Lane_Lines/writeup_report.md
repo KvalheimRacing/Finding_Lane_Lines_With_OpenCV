@@ -9,7 +9,7 @@ When you drive, you use your eyes to observe your surroundings. The lines on the
   <img src="test_videos_output\solidWhiteRight.gif"><br><br>
 </div>
 
-This project is the first among several projects in the [Self Driving Car Engineer](https://www.udacity.com/course/self-driving-car-engineer-nanodegree--nd013) program at Udacity. Here we learn cutting edge technology equipping us with the tools for a career in the field of Self Driving Cars. Udacity calls it a "Nanodegree", but it lasts over 9 months and with all the hours I am putting into teaching myself this, it really becomes a full education for me. So that brings me to this project, which was so much fun I just had to stop myself, I could go on forever, there is always something to do better, and so much good Inspiration!
+This project is the first among several projects in the [Self Driving Car Engineer](https://www.udacity.com/course/self-driving-car-engineer-nanodegree--nd013) program at Udacity. Here we learn cutting edge technology equipping us with the tools for a career in the field of Self Driving Cars. Udacity calls it a "Nanodegree", but it lasts over 9 months and with all the hours I am putting into this, it really becomes a full education for me. So that brings me to this project, which was so much fun I just had to stop myself, I could go on forever, there is always something to do better, and so much good Inspiration!
 
 With that said, below is a brief explanation of the pipeline which you can find [here](https://github.com/KvalheimRacing/CarND/blob/master/P1_Lane_Lines/P1_Lane_Lines.ipynb). 
 
@@ -92,9 +92,10 @@ Considering this algorithm only takes account for straight lines, it's ok.
 
 > This bring me to the other rule of thumb, **every problem will have tradeoffs**. The question becomes what are the tradeoffs you are willing to make? This will depend on the case you are solving!
 
-to counter for jumping, I made a history of lines ant took the average
+to counter for jumping, I made a history of lines and took the average of all the lef, and all the right lines. 
 create a buffer of slope and y-intercept values for the last N frames and to overlay a line whose parameters are a rolling mean of these values. This should smooth out the jitter and give the pipeline a "memory" so that if no line segments are detected, it could continue to overlay the last calculated line until another is found.
 
+no classes/object oriented programming
 
 The algorithm I created is likely overfitted to the data available in this project
 
