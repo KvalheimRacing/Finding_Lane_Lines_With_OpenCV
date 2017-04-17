@@ -31,7 +31,7 @@ With that said, below is a brief explanation of the pipeline which you can find 
 7) Merge the lane filling with the original image
    * Using an addWheighted() function, see [`α β λ`](writeup_report.md#parameters) below
 
-Test Image             |  1.Gray
+Input Image             |  1.Gray
 :-------------------------:|:-------------------------:
 ![input](https://github.com/KvalheimRacing/CarND/blob/master/P1_Lane_Lines/test_images/solidYellowLeft.jpg)|![gray](https://github.com/KvalheimRacing/CarND/blob/master/P1_Lane_Lines/test_images_output/Processed_gray_img_solidYellowLeft.jpg)
 3.Gaussian Blur                   |  4.Edges from Canny
