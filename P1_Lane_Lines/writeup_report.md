@@ -114,7 +114,7 @@ That brings us on to the;
    * Algorithm will fail if the car is not in the middle of the road
    * Obstructions like cars, which can be in the lane, and have lines which looks simmilar to the ones the algorithm is loking for.
 
-As a cosequence of all these shortcomings, we can see that the algorithm goes bananas on one of the last challenge videos of P4, this is not unexpected. 
+As a cosequence of all these shortcomings, we can see that the algorithm goes bananas on one of the last challenge videos of P4, this is not unexpected and kind of funny ^^, 
 
 
 ## The good things
