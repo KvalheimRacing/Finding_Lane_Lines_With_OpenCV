@@ -15,17 +15,17 @@ With that said, below is a brief explanation of the pipeline which you can find 
 
 
 ### Pipeline
-1) Convert image to gray-scale with `cv2.cvtColor(img, cv2.COLOR_RGB2GRAY)`
+1) Convert image to gray-scale with [`cv2.cvtColor(img, cv2.COLOR_RGB2GRAY)`](http://docs.opencv.org/2.4.8/modules/imgproc/doc/miscellaneous_transformations.html#cvtcolor)
    * Like all the functions under, this comes straight out of openCV
-2) Convert from RGB to HSV color space with `cv2.cvtColor(img, cv2.COLOR_RGB2HSV)`
+2) Convert from RGB to HSV color space with [`cv2.cvtColor(img, cv2.COLOR_RGB2HSV)`](http://docs.opencv.org/2.4.8/modules/imgproc/doc/miscellaneous_transformations.html#cvtcolor)
    * HSV separates luma, (image intensity), from chroma (the color information). This means that it's easier for us to detect dark yellow lines.
-3) Apply a low pass filter, Gaussian kernel -> `cv2.GaussianBlur()`
+3) Apply a low pass filter, Gaussian kernel -> [`cv2.GaussianBlur()`](http://docs.opencv.org/2.4.8/modules/imgproc/doc/filtering.html#gaussianblur)
    * This helps getting rid of noisy parts of the image which makes the next steps more reliable
-4) Run a Canny edge function -> `cv2.Canny()`
+4) Run a Canny edge function -> [`cv2.Canny()`](http://docs.opencv.org/2.4/modules/imgproc/doc/feature_detection.html?#canny)
    * This step detects edges in the image with the help of the gradient and hysteresis
-5) Apply a ROI (region of interest) and mask only what we want, by using `cv2.fillPoly()` and `cv2.bitwise_and()` 
+5) Apply a ROI (region of interest) and mask only what we want, by using [`cv2.fillPoly()`](http://docs.opencv.org/2.4.8/modules/core/doc/drawing_functions.html#fillpoly) and [`cv2.bitwise_and()`](http://docs.opencv.org/2.4.8/modules/core/doc/operations_on_arrays.html#bitwise-and) 
    * See the variable [vertices](https://github.com/KvalheimRacing/CarND/blob/master/P1_Lane_Lines/P1_Lane_Lines.ipynb) for more details
-6) Retrieve probabilistic Hough lines and make a lane filling from line segments, with `cv2.HoughLinesP()` ++
+6) Retrieve probabilistic Hough lines and make a lane filling from line segments, with [`cv2.HoughLinesP()`](http://docs.opencv.org/2.4/modules/imgproc/doc/feature_detection.html?#houghlinesp) ++
    * Separating the lines into left and right lines respectively
    * Here I also make a history of lines, separate and averages all the different lines I get from the Hough function
 7) Merge the lane filling with the original image
@@ -43,6 +43,7 @@ Input Image             |  1.Gray
 6.Lane made by Hough Lines                    | 7.Result
 ![lane](https://github.com/KvalheimRacing/CarND/blob/master/P1_Lane_Lines/test_images_output/Processed_lane_img_solidYellowLeft.jpg)|![finiced](https://github.com/KvalheimRacing/CarND/blob/master/P1_Lane_Lines/test_images_output/Processed_solidYellowLeft.jpg)
 
+***
 
 > You can find the rest of the pictures [here](https://github.com/KvalheimRacing/CarND/tree/master/P1_Lane_Lines/test_images_output)
 The final test of the algorithm was on the videos below. I spent some time tuning the parameters, especially how many lanes which gets stored in `hist_frames`. Found out that the ideal value was around 10-20. I also tried a lot of parameters on the Canny function and the Hough transform from other solutions, but with no luck of further improving the result shown here.
