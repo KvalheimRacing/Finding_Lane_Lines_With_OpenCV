@@ -1,4 +1,4 @@
-# Finding Lane Lines
+# Finding Lane Lines with openCV
 
 ## Introduction
 
