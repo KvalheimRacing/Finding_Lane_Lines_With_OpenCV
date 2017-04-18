@@ -1,4 +1,4 @@
-# Project Finding Lane Lines
+# Finding Lane Lines
 
 ## Introduction
 
