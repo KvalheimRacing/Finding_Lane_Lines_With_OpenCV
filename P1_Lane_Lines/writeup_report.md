@@ -156,7 +156,7 @@ Another Udacity student, [Kirill Danilyuk](https://github.com/Kidra521/carnd/blo
 
 ***
 
-I will work on a more advanced lane finding algorithm later on in May, so I will look into some papers regarding taking it to the nest level, specifically these ones;
+I will work on a more advanced lane finding algorithm later on in May, so I will look into some papers regarding taking it to the next level, specifically these ones;
 
 > [Robust And Real Time Detection Of Curvy Lanes With Desired Slopes For Driving Assistance And Autonomous Vehicles](https://arxiv.org/ftp/arxiv/papers/1501/1501.03124.pdf)
 
